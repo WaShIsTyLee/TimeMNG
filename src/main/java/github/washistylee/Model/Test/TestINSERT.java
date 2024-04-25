@@ -26,14 +26,17 @@ public class TestINSERT {
         ArrayList<String> diseases = new ArrayList<>();
         diseases.add("HOLA");
 
-        Teacher teacher = new Teacher("Carlos", "Serrano", "programacion@gmail.com", "1",childs, "Programacion");
+        Teacher teacher = new Teacher("Carlos", "Serrano", "juanelsoldado16@gmail.com", "1",childs, "Programacion");
         TeacherDAO tdao = new TeacherDAO();
         tdao.save(teacher);
 
 
-        Minder md = new Minder("Mari Corpus", "Solano", "juansan@gmail.com", "1", "6.30", childs);
+        Minder md = new Minder("Mari Corpus", "Solano", "juanelsoldado16@gmail.com", "1", "6.30", childs);
         MinderDAO mdao = new MinderDAO();
         mdao.save(md);
+        child.setName("Pedro");
+        child.setSurname("MAR");
+        child.setAge(12);
         child.setMinder(md);
         child.setTeacher(teacher);
         child.setDiseases(diseases);

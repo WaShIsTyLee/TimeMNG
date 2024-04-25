@@ -1,12 +1,13 @@
 package github.washistylee.Model.Entitys;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Child extends Person{
 
     private String classroom;
     private String observation;
-    private ArrayList <String> diseases;
+    private List <String> diseases;
     private int age;
     private int id;
     private Minder minder;
@@ -14,7 +15,7 @@ public class Child extends Person{
     private Schedule schedule;
 
 
-    public Child(String name, String surname, String classroom, String observation, ArrayList<String> diseases, int age, int id, Minder minder, Teacher teacher, Schedule schedule) {
+    public Child(String name, String surname, String classroom, String observation, List<String> diseases, int age, int id, Minder minder, Teacher teacher, Schedule schedule) {
         super(name, surname);
         this.classroom = classroom;
         this.observation = observation;
@@ -24,6 +25,17 @@ public class Child extends Person{
         this.minder = minder;
         this.teacher = teacher;
         this.schedule=schedule;
+    }
+    public Child(String name, String surname, String classroom, String observation, List<String> diseases, int age,
+                 Minder minder, Teacher teacher) {
+        super(name, surname);
+        this.classroom = classroom;
+        this.observation = observation;
+        this.diseases = diseases;
+        this.age = age;
+        this.minder = minder;
+        this.teacher = teacher;
+
     }
 
     public Schedule getSchedule() {
@@ -54,7 +66,7 @@ public class Child extends Person{
         this.observation = observation;
     }
 
-    public ArrayList<String> getDiseases() {
+    public List<String> getDiseases() {
         return diseases;
     }
 

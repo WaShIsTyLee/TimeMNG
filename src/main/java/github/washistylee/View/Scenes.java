@@ -6,6 +6,7 @@ public enum Scenes {
     MENULOGINMINDER("View/MenuLoginMinder.fxml"),
     MENUREGISTERMINDER("View/MenuRegisterMinder.fxml"),
     MENUREGISTERTEACHER("View/MenuRegisterTeacher.fxml"),
+    ADDCHILD("View/AddChild.fxml"),
     MENULOGINTEACHER("View/MenuLoginTeacher.fxml"),
     MAINMENU("View/MainMenu.fxml");
 

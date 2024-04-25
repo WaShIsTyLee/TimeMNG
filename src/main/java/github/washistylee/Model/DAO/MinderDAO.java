@@ -47,7 +47,6 @@ public  class MinderDAO implements DAO<Minder, String> {
         return minderaux;
     }
     public Minder findByMail(String key) {
-
         Minder minderaux = new Minder();
         if (key != null) {
             try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(FINDBYEMAIL)) {
@@ -59,8 +58,6 @@ public  class MinderDAO implements DAO<Minder, String> {
                     minderaux.setSurname(res.getString("Apellidos"));
                     minderaux.setPassword(res.getString("Contraseña"));
                     minderaux.setHours(res.getString("Horas"));
-
-
                 }
                 res.close();
             } catch (SQLException e) {
@@ -70,6 +67,7 @@ public  class MinderDAO implements DAO<Minder, String> {
 
         return minderaux;
     }
+
 
     public Minder update(Minder minder) {
         Minder minderaux = minder;

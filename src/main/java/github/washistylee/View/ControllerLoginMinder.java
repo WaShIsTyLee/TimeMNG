@@ -2,9 +2,9 @@ package github.washistylee.View;
 
 import github.washistylee.App;
 import github.washistylee.Model.DAO.MinderDAO;
-import github.washistylee.Model.DAO.Sesion;
 import github.washistylee.Model.Entitys.Minder;
 import github.washistylee.Model.Entitys.Person;
+import github.washistylee.Model.Entitys.Sesion;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -33,8 +33,8 @@ public class ControllerLoginMinder extends Controller implements Initializable {
     }
 
     @FXML
-    private Person takeValueslogIn() {
-        Person personaux = new Person();
+    private Minder takeValueslogIn() {
+        Minder personaux = new Minder();
         String email = textFieldUser.getText();
         String password = passwordField.getText();
         personaux.setEmail(email);
@@ -51,10 +51,9 @@ public class ControllerLoginMinder extends Controller implements Initializable {
             Sesion.getInstancia().logIn(minder);
             App.currentController.changeScene(Scenes.MAINMENU, null);
 
-
         } else {
 
-            //Ventana emergente
+            AppController.showAlertForLogin();
         }
         return minder;
     }

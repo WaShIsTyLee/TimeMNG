@@ -2,19 +2,18 @@ package github.washistylee.Model.DAO;
 
 import github.washistylee.Model.Connection.ConnectionDB;
 import github.washistylee.Model.Entitys.Child;
+import github.washistylee.Model.Entitys.Sesion;
 
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Iterator;
 import java.util.List;
 
 public class ChildDAO implements DAO<Child, String> {
     private final static String INSERT = "INSERT INTO Niños (Nombre, Apellidos, Edad, Clase, Enfermedades, Observacion, ID_Cuidador, ID_Profesor) " +
             "VALUES (?,?,?,?,?,?,?,?)";
-
     private final static String FINDBYID = "SELECT  n.ID FROM Niños AS n WHERE n.ID = ?";
     private final static String FINDBYNAME = "SELECT n.Nombre, n.Apellidos FROM Niños AS n WHERE n.Nombre=?";
     private final static String DELETE = "DELETE FROM Niños  WHERE ID = ?";
@@ -40,9 +39,10 @@ public class ChildDAO implements DAO<Child, String> {
             e.printStackTrace();
         }
 
-
         return childaux;
     }
+
+
 
     public Child findById(Integer key) {
 
@@ -107,7 +107,7 @@ public class ChildDAO implements DAO<Child, String> {
             pst.setString(3, child.getClassroom());
             pst.setString(4, child.getObservation());
             pst.setInt(5, child.getAge());
-         //   pst.setString(6, child.getDiseasesAsString());
+            //   pst.setString(6, child.getDiseasesAsString());
             pst.setInt(7, child.getId());
             pst.executeUpdate();
         } catch (SQLException e) {
