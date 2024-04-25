@@ -1,11 +1,9 @@
 package github.washistylee.View;
 
 import github.washistylee.App;
-import github.washistylee.Model.DAO.MinderDAO;
-import github.washistylee.Model.DAO.Sesion;
 import github.washistylee.Model.DAO.TeacherDAO;
-import github.washistylee.Model.Entitys.Minder;
 import github.washistylee.Model.Entitys.Person;
+import github.washistylee.Model.Entitys.Sesion;
 import github.washistylee.Model.Entitys.Teacher;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -36,8 +34,8 @@ public class ControllerLoginTeacher extends Controller implements Initializable 
     }
 
     @FXML
-    private Person takeValueslogIn() {
-        Person personaux = new Person();
+    private Teacher takeValueslogIn() {
+        Teacher personaux = new Teacher();
         String email = textFieldUser.getText();
         String password = passwordField.getText();
         personaux.setEmail(email);
@@ -53,17 +51,14 @@ public class ControllerLoginTeacher extends Controller implements Initializable 
             teacher = tdao.findByMail(takeValueslogIn().getEmail());
             Sesion.getInstancia().logIn(teacher);
             App.currentController.changeScene(Scenes.MAINMENU, null);
-
-
         } else {
-
-            //Ventana emergente
+            AppController.showAlertForLogin();
         }
         return teacher;
     }
 
 
-    private  boolean verifyCredentialsTeacher(Person person) {
+    private boolean verifyCredentialsTeacher(Person person) {
         boolean aux = false;
         TeacherDAO td = new TeacherDAO();
         Teacher teacher = td.verifyCredentialDAO(person.getEmail());

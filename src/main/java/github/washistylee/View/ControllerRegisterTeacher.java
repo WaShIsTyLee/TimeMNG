@@ -1,8 +1,8 @@
 package github.washistylee.View;
 
 import github.washistylee.App;
-import github.washistylee.Model.DAO.Sesion;
 import github.washistylee.Model.DAO.TeacherDAO;
+import github.washistylee.Model.Entitys.Sesion;
 import github.washistylee.Model.Entitys.Teacher;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -61,7 +61,7 @@ public class ControllerRegisterTeacher extends Controller implements Initializab
                 || teacheraux.getPassword().isEmpty()
                 || !teacheraux.validateEmail(teacheraux.getEmail())
         ){
-            System.out.println("Error");
+            AppController.showAlertForRegister();
         } else {
             tdao.save(teacheraux);
             Sesion.getInstancia().logIn(teacheraux);

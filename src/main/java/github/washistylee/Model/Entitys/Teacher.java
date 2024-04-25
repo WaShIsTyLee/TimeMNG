@@ -43,24 +43,6 @@ public class Teacher extends Person {
                 ", subject='" + subject + '\'' +
                 '}';
     }
-    public boolean validatePassword(String contrasena) {
-        boolean result = false;
-        Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!.#_()%?&])[A-Za-z\\d@$!.#_()%?&]{8,}$");
-        Matcher contrasenaMatcher = passwordPattern.matcher(contrasena);
-        if (contrasenaMatcher.matches()) {
-            result = true;
-        }
-        return result;
-    }
 
-    public boolean validateEmail(String mail) {
-        boolean result = false;
-        Pattern mailPattern = Pattern.compile("[A-Za-z0-9]+@+(gmail|outlook|hotmail)\\.(com|es)");
-        Matcher mailMatcher = mailPattern.matcher(mail);
-        if (mailMatcher.matches()) {
-            result = true;
-        }
-        return result;
-    }
 }
 

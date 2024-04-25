@@ -74,6 +74,25 @@ public class Person {
                 ", password='" + password + '\'' +
                 '}';
     }
+    public boolean validatePassword(String password) {
+        boolean result = false;
+        Pattern passwordPattern = Pattern.compile("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!.#_()%?&])[A-Za-z\\d@$!.#_()%?&]{8,}$");
+        Matcher contrasenaMatcher = passwordPattern.matcher(password);
+        if (contrasenaMatcher.matches()) {
+            result = true;
+        }
+        return result;
+    }
+
+    public boolean validateEmail(String mail) {
+        boolean result = false;
+        Pattern mailPattern = Pattern.compile("[A-Za-z0-9]+@+(gmail|outlook|hotmail)\\.(com|es)");
+        Matcher mailMatcher = mailPattern.matcher(mail);
+        if (mailMatcher.matches()) {
+            result = true;
+        }
+        return result;
+    }
 
 
 }

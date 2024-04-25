@@ -15,6 +15,7 @@ import java.util.List;
 public class TeacherDAO implements DAO <Teacher, String> {
     private final static String INSERT = "INSERT INTO Profesor (Nombre, Apellidos, ClaseImpartida, Email, Contraseña) VALUES (?,?,?,?,?)";
     private final static String FINDBYEMAIL = "SELECT p.Nombre, p.Email, p.Apellidos, p.Contraseña, p.ClaseImpartida FROM Profesor AS p WHERE p.Email = ?";
+    private final static String VERIFYTEACHERMAILIFEXIST = "SELECT p.Email FROM Profesor AS p WHERE p.Email = ?";
     private final static String VERIFYCREDENTIALS = "SELECT p.Email, p.Contraseña FROM Profesor AS p WHERE p.Email = ?";
     private final static String DELETE = "DELETE  FROM Profesor  WHERE Email = ?";
     private final static String UPDATE = "UPDATE Profesor SET Nombre=? , Apellidos=? , ClaseImpartida=? , Email=? , Contraseña=? WHERE Email=?";
@@ -66,6 +67,24 @@ public class TeacherDAO implements DAO <Teacher, String> {
             }
         }
 
+        return teacheraux;
+    }
+
+    public Teacher verifyTeacherEmailIfExist(String key) {
+        Teacher teacheraux = null;
+        if (key != null) {
+            try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(VERIFYTEACHERMAILIFEXIST)) {
+                pst.setString(1, key);
+                try (ResultSet res = pst.executeQuery()) {
+                    if (res.next()) {
+                        teacheraux = new Teacher();
+                        teacheraux.setEmail(res.getString("Email"));
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
         return teacheraux;
     }
 

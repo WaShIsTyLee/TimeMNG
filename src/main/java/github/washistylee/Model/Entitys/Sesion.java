@@ -27,7 +27,8 @@ public class Sesion  {
         userLoged = user;
     }
 
-    public static Person getUsuarioIniciado() {
+    public Person getUsuarioIniciado() {
         return userLoged;
     }
+
 }
