@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="64502594-c131-4c8d-8738-4294ffef8383" name="Changes" comment="Carga inicial DAO">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/connection.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Connection/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Connection/ConnectionProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Connection/Executable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/ChildDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/DAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/MinderDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/ScheduleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/Sesion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/TeacherDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Minder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Month.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Schedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Sesion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/LoadBD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestConsultas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestDELETE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestINSERT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestSchedule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestUPDATE.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Utils/XMLManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/AppController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerLoginMinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerLoginRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerLoginTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerMainMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerRegisterMinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerRegisterTeacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/Scenes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/FondoAzul.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/Layout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginMinder.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginRegister.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginTeacher.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuRegisterMinder.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuRegisterTeacher.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/secondary.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/toBackArrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Connection/ConnectionDB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Connection/ConnectionProperties.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Connection/Executable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/ChildDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/DAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/MinderDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/ScheduleDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/Sesion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/TeacherDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Child.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Minder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Month.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Schedule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Sesion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Teacher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/LoadBD.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestConsultas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestDELETE.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestINSERT.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestSchedule.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestUPDATE.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Utils/XMLManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/AppController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/Controller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerLoginMinder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerLoginRegister.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerLoginTeacher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerMainMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerRegisterMinder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerRegisterTeacher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/FondoAzul.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/Layout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginMinder.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginRegister.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginTeacher.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuRegisterMinder.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuRegisterTeacher.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/Scenes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/View.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/secondary.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/toBackArrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="HTML File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2fUUTO0zskP7Cwd31KQDKrw5Ak9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Washi/IdeaProjects/TimeMNG/src/main/resources/github/washistylee/View&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="github.washistylee.Model.Entitys" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Washi\IdeaProjects\TimeMNG\src\main\resources\github\washistylee\View" />
+      <recent name="C:\Users\Washi\IdeaProjects\TimeMNG\src\main\java\github\washistylee\View" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Washi\IdeaProjects\TimeMNG\src\main\resources\github\washistylee\View" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="github.washistylee" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="github.washistylee.Model.Entitys" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64502594-c131-4c8d-8738-4294ffef8383" name="Changes" comment="" />
+      <created>1713855160636</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713855160636</updated>
+      <workItem from="1713855166396" duration="13553000" />
+      <workItem from="1713871520552" duration="984000" />
+      <workItem from="1713876611079" duration="13185000" />
+      <workItem from="1713896550790" duration="21000" />
+      <workItem from="1713902232906" duration="271000" />
+      <workItem from="1713904902967" duration="2814000" />
+      <workItem from="1713939597282" duration="7003000" />
+      <workItem from="1713946660753" duration="1290000" />
+      <workItem from="1713948738338" duration="10000" />
+      <workItem from="1713952718531" duration="4315000" />
+      <workItem from="1713957263910" duration="36000" />
+      <workItem from="1713957911277" duration="82000" />
+      <workItem from="1713962717908" duration="332000" />
+      <workItem from="1713970293278" duration="14325000" />
+      <workItem from="1713984792866" duration="293000" />
+      <workItem from="1713992146955" duration="3415000" />
+      <workItem from="1713995609486" duration="87000" />
+      <workItem from="1714026430216" duration="69000" />
+      <workItem from="1714026689865" duration="121000" />
+      <workItem from="1714029729994" duration="539000" />
+      <workItem from="1714030667573" duration="83000" />
+      <workItem from="1714030761928" duration="164000" />
+      <workItem from="1714031102110" duration="354000" />
+      <workItem from="1714032124087" duration="86000" />
+      <workItem from="1714032223126" duration="60000" />
+    </task>
+    <task id="LOCAL-00001" summary="Hola">
+      <option name="closed" value="true" />
+      <created>1713855243101</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713855243101</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Carga inicial DAO">
+      <option name="closed" value="true" />
+      <created>1713855335341</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713855335341</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Hola" />
+    <MESSAGE value="Carga inicial DAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Carga inicial DAO" />
+  </component>
+</project>

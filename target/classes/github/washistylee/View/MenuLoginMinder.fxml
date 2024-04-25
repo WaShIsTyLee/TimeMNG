@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #00ffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.washistylee.View.ControllerLoginMinder">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="185.60000000000002" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="385.6" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@Logo.png" />
+         </image>
+      </ImageView>
+      <Text fontSmoothingType="LCD" layoutX="234.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TimeMNG" wrappingWidth="163.3890380859375" AnchorPane.bottomAnchor="337.02744140625" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="202.21096191406252" AnchorPane.topAnchor="25.37646484375">
+         <font>
+            <Font name="Book Antiqua" size="31.0" />
+         </font>
+      </Text>
+      <Text layoutX="242.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesión como Cuidador" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="97.609375" AnchorPane.topAnchor="132.0">
+         <font>
+            <Font name="Book Antiqua" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="button" layoutX="304.0" layoutY="263.0" mnemonicParsing="false" onAction="#logWithMinder" text="Iniciar Sesion" />
+      <TextField fx:id="textFieldUser" layoutX="277.0" layoutY="174.0" promptText="Usuario" text="juanelsoldado16@gmail.com" />
+      <ImageView fx:id="imageView" fitHeight="60.0" fitWidth="63.0" layoutX="523.0" layoutY="14.0" onMouseClicked="#goToLoginRegisterView">
+         <image>
+            <Image url="@toBackArrow.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passwordField" layoutX="277.0" layoutY="209.0" promptText="Contraseña" text="Juaneco99." />
+      <Text layoutX="234.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tu Asistente de Tiempo para el Cuidado de Niños">
+         <font>
+            <Font name="Book Antiqua" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
