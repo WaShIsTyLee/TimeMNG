@@ -56,6 +56,14 @@ public class AppController extends Controller implements Initializable {
                 "Puede que el email no corresponda a ningún usuario.");
         alertRegister.showAndWait();
     }
+    @FXML
+    public static void showAlertForUpdateChild() {
+        alertRegister.setTitle("Error al actualizar");
+        alertRegister.setHeaderText(null);
+        alertRegister.setContentText("El email del profesor no corresponde con ninguno. \n" +
+                "No olvides proporcionar la ID del niño que deseas modificar");
+        alertRegister.showAndWait();
+    }
 
 
     public static View loadFXML(Scenes scenes) throws IOException {
@@ -73,7 +81,7 @@ public class AppController extends Controller implements Initializable {
     public void onOpen(Object input) throws IOException {
         changeScene(Scenes.PANTALLALOGINREGISTER,null);
     }
-    public void openModal(Scenes scene, String title,Controller parent, Object data) throws IOException {
+    public  void openModal(Scenes scene, String title,Controller parent, Object data) throws IOException {
         View view = loadFXML(scene);
         Stage stage = new Stage();
         stage.setTitle(title);

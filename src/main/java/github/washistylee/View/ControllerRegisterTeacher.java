@@ -65,7 +65,7 @@ public class ControllerRegisterTeacher extends Controller implements Initializab
         } else {
             tdao.save(teacheraux);
             Sesion.getInstancia().logIn(teacheraux);
-            App.currentController.changeScene(Scenes.MAINMENU, null);
+            App.currentController.changeScene(Scenes.MAINMENUMINDERLOGGED, null);
         }
 
 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #010d25;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.washistylee.View.ControllerMainMenuTeacherLogged">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="49.0" fitWidth="49.0" layoutX="831.0" layoutY="15.0" onMouseClicked="#logOut">
+         <image>
+            <Image url="@LogOut.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonAddChildrenModal" layoutX="14.0" layoutY="550.0" mnemonicParsing="false" onAction="#addChildModal" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #e5903c;" text="Agregar niño" textFill="WHITE" />
+      <Button fx:id="deleteChildren" layoutX="131.0" layoutY="550.0" mnemonicParsing="false" onAction="#deleteChildModal" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #e5903c;" text="Borrar Niño" textFill="WHITE" />
+      <Button layoutX="363.0" layoutY="550.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: #e5903c;" text="Añadir horario a un niño" textFill="WHITE" />
+      <ImageView fitHeight="177.0" fitWidth="176.0" layoutX="14.0" layoutY="7.0">
+         <image>
+            <Image url="@LogoApp.png" />
+         </image>
+      </ImageView>
+      <Text fill="#e5903c" layoutX="223.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time MNG">
+         <font>
+            <Font name="Harrington" size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="text" fill="#e5903c" layoutX="226.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="Harrington" size="25.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableView" editable="true" layoutX="14.0" layoutY="205.0" prefHeight="238.0" prefWidth="863.0" style="-fx-background-color: #e5903c;">
+         <columns>
+            <TableColumn fx:id="tableColumnIDchild" prefWidth="43.20001411437988" text="ID" />
+            <TableColumn fx:id="tableColumnName" prefWidth="80.79998016357422" text="Nombre" />
+            <TableColumn fx:id="tableColumnSurname" prefWidth="124.00003051757812" text="Apellido" />
+            <TableColumn fx:id="tableColumnClass" prefWidth="69.5999755859375" text="Clase" />
+            <TableColumn fx:id="tableColumnAge" minWidth="0.0" prefWidth="65.60003662109375" text="Edad" />
+            <TableColumn fx:id="tableColumnObservation" prefWidth="160.00003051757812" text="Observacion" />
+            <TableColumn fx:id="tableColumnDiseases" minWidth="0.0" prefWidth="164.79998779296875" text="Enfermedades" />
+            <TableColumn fx:id="tableColumnIDTeacher" minWidth="0.0" prefWidth="156.0" text="ID Cuidador" />
+         </columns>
+      </TableView>
+      <Button fx:id="updateChildren" layoutX="248.0" layoutY="549.0" mnemonicParsing="false" onAction="#updateChildModal" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #e5903c;" text="Actualizar Niño" textFill="WHITE" />
+   </children>
+</AnchorPane>
