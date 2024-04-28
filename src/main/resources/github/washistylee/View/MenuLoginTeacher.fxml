@@ -41,7 +41,7 @@
          </cursor></TextField>
       <ImageView fx:id="imageView" fitHeight="60.0" fitWidth="63.0" layoutX="523.0" layoutY="14.0" onMouseClicked="#goToLoginRegisterView">
          <image>
-            <Image url="@toBackArrow.png" />
+            <Image url="@toBackArroww.png" />
          </image>
       </ImageView>
       <PasswordField fx:id="passwordField" layoutX="278.0" layoutY="211.0" promptText="Contraseña" text="Juaneco99.">

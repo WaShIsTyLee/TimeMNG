@@ -26,6 +26,20 @@ public class Child extends Person{
         this.teacher = teacher;
         this.schedule=schedule;
     }
+
+
+
+    public Child(String name, String surname, String classroom, String observation, List<String> diseases, int age, int id, Minder minder, Teacher teacher) {
+        super(name, surname);
+        this.classroom = classroom;
+        this.observation = observation;
+        this.diseases = diseases;
+        this.age = age;
+        this.id = id;
+        this.minder = minder;
+        this.teacher = teacher;
+    }
+
     public Child(String name, String surname, String classroom, String observation, List<String> diseases, int age,
                  Minder minder, Teacher teacher) {
         super(name, surname);
@@ -70,7 +84,7 @@ public class Child extends Person{
         return diseases;
     }
 
-    public void setDiseases(ArrayList<String> diseases) {
+    public void setDiseases(List<String> diseases) {
         this.diseases = diseases;
     }
 
@@ -131,7 +145,7 @@ public class Child extends Person{
     public String getDiseasesString() {
         String diseasesAsString = "";
         for (int i = 0; i < diseases.size(); i++) {
-            diseasesAsString = diseases.get(i) + diseasesAsString;
+            diseasesAsString += diseases.get(i);
             if (i < diseases.size() - 1) {
                 diseasesAsString += ", ";
             }

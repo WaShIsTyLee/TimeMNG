@@ -18,7 +18,7 @@
       <TextField fx:id="textFieldObservation" layoutX="332.0" layoutY="225.0" promptText="Observacion" />
       <TextField fx:id="textFieldEmailProfesor" layoutX="172.0" layoutY="225.0" promptText="Email profesor" />
       <TextField fx:id="textFielClass" layoutX="332.0" layoutY="187.0" promptText="Clase" />
-      <Button fx:id="buttonAddChildtoBD" layoutX="331.0" layoutY="324.0" mnemonicParsing="false" onAction="#addChildToBD" text="Enviar">
+      <Button fx:id="buttonAddChildtoBD" layoutX="331.0" layoutY="324.0" mnemonicParsing="false" onAction="#backToMainMenu" text="Enviar">
          <effect>
             <Reflection />
          </effect></Button>
@@ -27,7 +27,7 @@
             <Image url="@LogoApp.png" />
          </image>
       </ImageView>
-      <Text fill="#e5903c" layoutX="196.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Añade un niño a tu lista">
+      <Text fill="#e5903c" layoutX="196.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Añade un niño a tu lista">
          <font>
             <Font name="Harrington" size="25.0" />
          </font>

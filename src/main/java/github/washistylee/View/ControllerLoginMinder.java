@@ -49,7 +49,7 @@ public class ControllerLoginMinder extends Controller implements Initializable {
         if (verifyCredentialsMinder(takeValueslogIn())) {
             minder = mdao.findByMail(takeValueslogIn().getEmail());
             Sesion.getInstancia().logIn(minder);
-            App.currentController.changeScene(Scenes.MAINMENU, null);
+            App.currentController.changeScene(Scenes.MAINMENUMINDERLOGGED, null);
 
         } else {
 

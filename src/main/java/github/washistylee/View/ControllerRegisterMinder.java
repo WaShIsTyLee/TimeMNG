@@ -6,7 +6,6 @@ import github.washistylee.Model.Entitys.Minder;
 import github.washistylee.Model.Entitys.Sesion;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -68,7 +67,7 @@ public class ControllerRegisterMinder extends Controller implements Initializabl
         } else {
             mdao.save(minderaux);
             Sesion.getInstancia().logIn(minderaux);
-            App.currentController.changeScene(Scenes.MAINMENU, null);
+            App.currentController.changeScene(Scenes.MAINMENUMINDERLOGGED, null);
         }
 
 

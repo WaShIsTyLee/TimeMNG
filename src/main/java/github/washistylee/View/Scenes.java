@@ -7,8 +7,11 @@ public enum Scenes {
     MENUREGISTERMINDER("View/MenuRegisterMinder.fxml"),
     MENUREGISTERTEACHER("View/MenuRegisterTeacher.fxml"),
     ADDCHILD("View/AddChild.fxml"),
+    DELETECHILD("View/DeleteChild.fxml"),
+    UPDATECHILD("View/UpdateChild.fxml"),
     MENULOGINTEACHER("View/MenuLoginTeacher.fxml"),
-    MAINMENU("View/MainMenu.fxml");
+    MAINMENUMINDERLOGGED("View/MainMenuMinderLogged.fxml"),
+    MAINMENUTEACHERLOGGED("View/MainMenuTeacherLogged.fxml");
 
     private String url;
     Scenes(String url){

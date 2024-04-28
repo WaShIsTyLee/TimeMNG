@@ -50,7 +50,7 @@ public class ControllerLoginTeacher extends Controller implements Initializable 
         if (verifyCredentialsTeacher(takeValueslogIn())) {
             teacher = tdao.findByMail(takeValueslogIn().getEmail());
             Sesion.getInstancia().logIn(teacher);
-            App.currentController.changeScene(Scenes.MAINMENU, null);
+            App.currentController.changeScene(Scenes.MAINMENUMINDERLOGGED, null);
         } else {
             AppController.showAlertForLogin();
         }

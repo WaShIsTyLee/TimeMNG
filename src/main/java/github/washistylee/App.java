@@ -13,14 +13,13 @@ import java.io.IOException;
 /**
  * JavaFX Appten
  */
-public class    App extends Application {
+public class  App extends Application {
     public static Scene scene;
     public static Stage stage;
     public static AppController currentController;
 
     @Override
     public void start(Stage stage) throws IOException {
-        //View/layout.fxml
         View view = AppController.loadFXML(Scenes.ROOT);
         scene = new Scene(view.scene, 1920, 1080);
         currentController = (AppController) view.controller;
