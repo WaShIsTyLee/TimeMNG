@@ -1,5 +1,4 @@
 package github.washistylee.View;
-
 import github.washistylee.App;
 import github.washistylee.Model.DAO.MinderDAO;
 import github.washistylee.Model.Entitys.Minder;
@@ -11,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -28,18 +26,17 @@ public class ControllerLoginMinder extends Controller implements Initializable {
 
     @FXML
     private void goToLoginRegisterView() throws IOException {
-        System.out.println(Scenes.PANTALLALOGINREGISTER);
         App.currentController.changeScene(Scenes.PANTALLALOGINREGISTER, null);
     }
 
     @FXML
     private Minder takeValueslogIn() {
-        Minder personaux = new Minder();
+        Minder minderaux = new Minder();
         String email = textFieldUser.getText();
         String password = passwordField.getText();
-        personaux.setEmail(email);
-        personaux.setPassword(password);
-        return personaux;
+        minderaux.setEmail(email);
+        minderaux.setPassword(password);
+        return minderaux;
     }
 
     @FXML
@@ -50,9 +47,7 @@ public class ControllerLoginMinder extends Controller implements Initializable {
             minder = mdao.findByMail(takeValueslogIn().getEmail());
             Sesion.getInstancia().logIn(minder);
             App.currentController.changeScene(Scenes.MAINMENUMINDERLOGGED, null);
-
         } else {
-
             AppController.showAlertForLogin();
         }
         return minder;
@@ -62,12 +57,12 @@ public class ControllerLoginMinder extends Controller implements Initializable {
     private static boolean verifyCredentialsMinder(Person person) {
         boolean aux = false;
         MinderDAO md = new MinderDAO();
-        Minder minder = md.verifyCredentialDAO(person.getEmail());
-
-        if (minder.getEmail() != null && minder.getEmail().equals(person.getEmail()) && minder.getPassword() != null && minder.getPassword().equals(person.getPassword())) {
+        Minder minderVer = md.verifyCredentialDAO(person.getEmail());
+        if (minderVer.getEmail() != null && minderVer.getEmail().equals(person.getEmail())
+                && minderVer.getPassword() != null
+                && minderVer.getPassword().equals(person.getPassword())) {
             aux = true;
         }
-        System.out.println(aux);
         return aux;
     }
 

@@ -34,7 +34,6 @@ public class ControllerRegisterTeacher extends Controller implements Initializab
 
     @FXML
     private void goToLoginRegisterView() throws IOException {
-        System.out.println(Scenes.PANTALLALOGINREGISTER);
         App.currentController.changeScene(Scenes.PANTALLALOGINREGISTER, null);
     }
 
@@ -65,7 +64,7 @@ public class ControllerRegisterTeacher extends Controller implements Initializab
         } else {
             tdao.save(teacheraux);
             Sesion.getInstancia().logIn(teacheraux);
-            App.currentController.changeScene(Scenes.MAINMENUMINDERLOGGED, null);
+            App.currentController.changeScene(Scenes.MAINMENUTEACHERLOGGED, null);
         }
 
 

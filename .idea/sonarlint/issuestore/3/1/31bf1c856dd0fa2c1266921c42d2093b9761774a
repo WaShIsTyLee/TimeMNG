@@ -1,0 +1,15 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿ó™ú
+—
+java:S11861"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷’²É
+œ
+java:S11866"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®Òêúÿÿÿÿ
+œ
+java:S1186;"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘ÝŸüÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(ú¤ÝÁ
+@	java:S106&"+Replace this use of System.out by a logger.(¤Å‡¿
+E	java:S106+"+Replace this use of System.out by a logger.(ç˜ÁÕýÿÿÿÿ
+K
+java:S1128"5Remove this unused import 'javafx.scene.image.Image'.(‰¿½Ç
+T
+java:S1128"9Remove this unused import 'javafx.scene.image.ImageView'.(áÿ®Ãüÿÿÿÿ

@@ -34,7 +34,12 @@ public class DeleteChildController extends Controller implements Initializable {
     public void deleteChildFromBD() {
         Child childaux = getValuesTextField();
         ChildDAO cdao = new ChildDAO();
-        cdao.delete(childaux);
+        if (cdao.findById(childaux.getId())!=null){
+            cdao.delete(childaux);
+        }else {
+            AppController.showAlertForAddChild();
+        }
+
     }
 
     @Override

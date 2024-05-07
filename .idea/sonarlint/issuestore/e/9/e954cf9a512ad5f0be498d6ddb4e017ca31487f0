@@ -1,0 +1,25 @@
+
+J
+java:S3740%"/Provide the parametrized type for this generic.(³ã˜²øÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿ó™ú
+a
+java:S2095H"FUse try-with-resources or close this "ChildDAO" in a "finally" clause.(†İÕüÿÿÿÿ
+œ
+java:S1186R"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®Òêúÿÿÿÿ
+j
+java:S14509"TRemove the "child" field and declare it as a local variable in the relevant methods.(î”Ã°
+T
+java:S1117I"9Rename "child" which hides the field declared at line 57.(®§¦şÿÿÿÿ
+T
+java:S1117Y"9Rename "child" which hides the field declared at line 57.(õøÇşüÿÿÿÿ
+O
+java:S1117["9Rename "child" which hides the field declared at line 57.(Á››
+O
+java:S1117]"9Rename "child" which hides the field declared at line 57.(¦ºü
+O
+java:S1117_"9Rename "child" which hides the field declared at line 57.(«Šìš
+O
+java:S1117a"9Rename "child" which hides the field declared at line 57.(¼½ı 
+O
+java:S1117e"9Rename "child" which hides the field declared at line 57.(—şÔŒ
+d	java:S100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Û›…

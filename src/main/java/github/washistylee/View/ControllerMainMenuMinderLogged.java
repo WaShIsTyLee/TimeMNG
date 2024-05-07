@@ -1,8 +1,6 @@
 package github.washistylee.View;
-
 import github.washistylee.App;
 import github.washistylee.Model.DAO.ChildDAO;
-import github.washistylee.Model.DAO.MinderDAO;
 import github.washistylee.Model.Entitys.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
@@ -14,7 +12,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -27,9 +24,15 @@ public class ControllerMainMenuMinderLogged extends Controller implements Initia
     @FXML
     Button buttonAddChildrenModal;
     @FXML
+    Button buttonUpdateScheduleModal;
+    @FXML
     Button deleteChildren;
     @FXML
+    Button consultActivities;
+    @FXML
     Button updateChildren;
+    @FXML
+    Button addSchedule;
     @FXML
     TableView tableView;
     @FXML
@@ -61,9 +64,7 @@ public class ControllerMainMenuMinderLogged extends Controller implements Initia
             Minder minder = (Minder) personaux;
             text.setText("Bienvenido " + Sesion.getInstancia().getUsuarioIniciado().getName() + " tu horario de trabajo " +
                     "es de " + minder.getHours() + " horas");
-
         }
-
     }
 
     @Override
@@ -72,18 +73,6 @@ public class ControllerMainMenuMinderLogged extends Controller implements Initia
         List<Child> child = cdao.findChildByMinderMail(Sesion.getInstancia().getUsuarioIniciado().getEmail());
         this.child = FXCollections.observableArrayList(child);
         tableView.setItems(this.child);
-
-        Person personaux = Sesion.getInstancia().getUsuarioIniciado();
-        if (personaux.getClass() == Minder.class) {
-            Minder minder = (Minder) personaux;
-            System.out.println(minder);
-            MinderDAO mdao = new MinderDAO();
-            mdao.findByMail(minder.getEmail());
-
-        } else {
-            Teacher teacher = (Teacher) personaux;
-            System.out.println(teacher);
-        }
 
 
     }
@@ -120,23 +109,28 @@ public class ControllerMainMenuMinderLogged extends Controller implements Initia
     private void logOut() throws IOException {
         Sesion.getInstancia().logOut();
         App.currentController.changeScene(Scenes.PANTALLALOGINREGISTER, null);
-        System.out.println(Sesion.getInstancia().getUsuarioIniciado());
-
     }
 
-    @FXML
-    private void updateUserLogged(){
-
-    }
 
     @FXML
     public void addChildModal() throws IOException {
-        App.currentController.openModal(Scenes.ADDCHILD, "Añadir un niño...", this, null);
+        App.currentController.openModal(Scenes.ADDCHILDONMINDER, "Añadir un niño...", this, null);
+    } @FXML
+    public void consultScheduleModal() throws IOException {
+        App.currentController.openModal(Scenes.CONSULTSCHEDULE, "Añadir un niño...", this, null);
     }
 
     @FXML
-    public  void updateChildModal() throws IOException {
-        App.currentController.openModal(Scenes.UPDATECHILD, "Actualizar un niño...", this, null);
+    public void updateChildModal() throws IOException {
+        App.currentController.openModal(Scenes.UPDATECHILDONMINDER, "Actualizar un niño...", this, null);
+    }
+    @FXML
+    public void addScheduledModal() throws IOException {
+        App.currentController.openModal(Scenes.ADDSCHEDULE, "Añadir un horario...", this, null);
+    }
+    @FXML
+    public void UpdateScheduledModal() throws IOException {
+        App.currentController.openModal(Scenes.UPDATESCHEDULE, "Actualizar un horario...", this, null);
     }
 
     @FXML

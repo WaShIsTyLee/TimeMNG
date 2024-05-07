@@ -53,10 +53,5 @@
             <Font name="Book Antiqua" size="15.0" />
          </font>
       </Text>
-      <ImageView fitHeight="60.0" fitWidth="63.0" layoutX="524.0" layoutY="11.0" onMouseClicked="#goToLoginRegisterView">
-         <image>
-            <Image url="@toBackArroww.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

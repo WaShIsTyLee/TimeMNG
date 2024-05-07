@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #010d25;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.washistylee.View.ControllerScheduleTable">
+   <children>
+      <TableView fx:id="tableView" layoutX="11.0" layoutY="144.0" prefHeight="236.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="tableColumnIDChild" prefWidth="61.5999755859375" text="ID_Niño" />
+            <TableColumn fx:id="tableColumnChildName" prefWidth="87.20001220703125" text="Nombre" />
+          <TableColumn fx:id="tableColumnMonth" minWidth="0.0" prefWidth="86.39990234375" text="Mes" />
+            <TableColumn fx:id="tableColumnDays" prefWidth="53.5999755859375" text="Dia" />
+            <TableColumn fx:id="tableColumnHour" minWidth="0.0" prefWidth="64.79998779296875" text="Hora" />
+            <TableColumn fx:id="tableColumnActivities" prefWidth="138.39996337890625" text="Actividad" />
+            <TableColumn fx:id="tableColumnID" prefWidth="91.99993896484375" text="ID_Actividad" />
+        </columns>
+      </TableView>
+      <Text fill="#e5903c" layoutX="150.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de actividades pendientes">
+         <font>
+            <Font name="Harrington" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="103.0" fitWidth="100.0" layoutX="24.0" layoutY="22.0">
+         <image>
+            <Image url="@LogoApp.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
