@@ -4,10 +4,7 @@ import github.washistylee.Model.Connection.ConnectionDB;
 import github.washistylee.Model.Entitys.Child;
 
 import java.io.IOException;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -16,6 +13,7 @@ public class ChildDAO implements DAO<Child, String> {
     private final static String INSERT = "INSERT INTO Niños (Nombre, Apellidos, Edad, Clase, Enfermedades, Observacion, ID_Cuidador, ID_Profesor) " +
             "VALUES (?,?,?,?,?,?,?,?)";
     private final static String FINDBYID = "SELECT n.ID, n.Nombre, n.Apellidos, n.Edad, n.Clase, n.Enfermedades, n.Observacion, n.ID_Cuidador, n.ID_Profesor FROM Niños AS n WHERE n.ID = ?";
+    private final static String FINDALLBYTEACHER = "SELECT n.Clase, n.Nombre, n.ID, n.Apellidos, n.ID_Cuidador, n.Observacion, n.Enfermedades, n.Edad FROM Niños AS n WHERE ID_Profesor = ?";
     private final static String FINDALLBYMINDER = "SELECT n.Clase, n.Nombre, n.ID, n.Apellidos, n.ID_Profesor, n.Observacion, n.Enfermedades, n.Edad FROM Niños AS n WHERE ID_Cuidador = ?";
     private final static String DELETE = "DELETE FROM Niños  WHERE ID = ?";
     private final static String UPDATE = "UPDATE Niños SET Nombre=? , Apellidos=? , Edad = ? , Clase=? , Observacion=? , ID_Profesor=?,  Enfermedades=? WHERE ID=?";
@@ -51,7 +49,8 @@ public class ChildDAO implements DAO<Child, String> {
         TeacherDAO tdao = new TeacherDAO();
         MinderDAO mdao = new MinderDAO();
         if (key != null) {
-            try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(FINDBYID)) {
+            Connection conn = ConnectionDB.getConnection();
+            try (PreparedStatement pst = conn.prepareStatement(FINDBYID)) {
                 pst.setInt(1, key);
                 ResultSet res = pst.executeQuery();
                 if (res.next()) {
@@ -172,14 +171,46 @@ public class ChildDAO implements DAO<Child, String> {
 
         return child;
     }
+    public ArrayList<Child> findChildByTeacherMail(String key) {
+        Child childaux;
+        MinderDAO mdao = new MinderDAO();
+        ArrayList <Child> teacherChilds = new ArrayList<>();
+        if (key != null) {
+            try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(FINDALLBYTEACHER)) {
+                pst.setString(1, key);
+                ResultSet res = pst.executeQuery();
+                while (res.next()) {
+                    childaux = new Child();
+                    childaux.setId(res.getInt("ID"));
+                    childaux.setSurname(res.getString("Apellidos"));
+                    childaux.setName(res.getString("Nombre"));
+                    childaux.setMinder(mdao.findByMail(res.getString("ID_Cuidador")));
+                    childaux.setObservation(res.getString("Observacion"));
+                    childaux.setClassroom(res.getString("Clase"));
+                    String diseasesString = res.getString("Enfermedades");
+                    String[] diseasesArray = diseasesString.split(",");
+                    List<String> diseasesList = Arrays.asList(diseasesArray);
+                    childaux.setDiseases(diseasesList);
+                    childaux.setAge(res.getInt("Edad"));
+                    teacherChilds.add(childaux);
+                }
+                res.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return teacherChilds;
+    }
 
 
     public ArrayList<Child> findChildByMinderMail(String key) {
-        Child childaux = null;
+        Child childaux;
+        ScheduleDAO sdao = new ScheduleDAO();
         TeacherDAO tdao = new TeacherDAO();
         ArrayList <Child> minderChilds = new ArrayList<>();
         if (key != null) {
-            try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(FINDALLBYMINDER)) {
+            Connection conn =ConnectionDB.getConnection();
+            try (PreparedStatement pst = conn.prepareStatement(FINDALLBYMINDER)) {
                 pst.setString(1, key);
                 ResultSet res = pst.executeQuery();
                 while (res.next()) {
@@ -195,6 +226,7 @@ public class ChildDAO implements DAO<Child, String> {
                     List<String> diseasesList = Arrays.asList(diseasesArray);
                     childaux.setDiseases(diseasesList);
                     childaux.setAge(res.getInt("Edad"));
+                    childaux.setSchedule(sdao.findAllSchedulesByChild(childaux));
                     minderChilds.add(childaux);
                 }
                 res.close();

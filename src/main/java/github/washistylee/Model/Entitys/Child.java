@@ -1,6 +1,5 @@
 package github.washistylee.Model.Entitys;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Child extends Person{
@@ -12,10 +11,17 @@ public class Child extends Person{
     private int id;
     private Minder minder;
     private Teacher teacher;
-    private Schedule schedule;
+    private List <Schedule> schedule;
 
+    public List<Schedule> getSchedule() {
+        return schedule;
+    }
 
-    public Child(String name, String surname, String classroom, String observation, List<String> diseases, int age, int id, Minder minder, Teacher teacher, Schedule schedule) {
+    public void setSchedule(List<Schedule> schedule) {
+        this.schedule = schedule;
+    }
+
+    public Child(String name, String surname, String classroom, String observation, List<String> diseases, int age, int id, Minder minder, Teacher teacher, List <Schedule> schedule) {
         super(name, surname);
         this.classroom = classroom;
         this.observation = observation;
@@ -52,17 +58,33 @@ public class Child extends Person{
 
     }
 
-    public Schedule getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(Schedule schedule) {
+    public Child(String name, String surname, String email, String password, String classroom, String observation, int age, int id, Minder minder, Teacher teacher, List <Schedule> schedule) {
+        super(name, surname, email, password);
+        this.classroom = classroom;
+        this.observation = observation;
+        this.age = age;
+        this.id = id;
+        this.minder = minder;
+        this.teacher = teacher;
         this.schedule = schedule;
     }
+
+    public Child(String name, String surname, String classroom, String observation, int age, Minder minder, Teacher teacher) {
+        super(name, surname);
+        this.classroom = classroom;
+        this.observation = observation;
+        this.age = age;
+        this.minder = minder;
+        this.teacher = teacher;
+        this.schedule = schedule;
+    }
+
+
 
     public Child(){
 
     }
+
 
     public String getClassroom() {
         return classroom;

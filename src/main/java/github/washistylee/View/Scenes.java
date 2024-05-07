@@ -6,11 +6,16 @@ public enum Scenes {
     MENULOGINMINDER("View/MenuLoginMinder.fxml"),
     MENUREGISTERMINDER("View/MenuRegisterMinder.fxml"),
     MENUREGISTERTEACHER("View/MenuRegisterTeacher.fxml"),
-    ADDCHILD("View/AddChild.fxml"),
+    ADDCHILDONMINDER("View/AddChildOnMinder.fxml"),
     DELETECHILD("View/DeleteChild.fxml"),
-    UPDATECHILD("View/UpdateChild.fxml"),
+    UPDATECHILDONMINDER("View/UpdateChildOnMinder.fxml"),
+    UPDATECHILDONTEACHER("View/UpdateChildOnTeacher.fxml"),
+    ADDSCHEDULE("View/AddSchedule.fxml"),
+    UPDATESCHEDULE("View/UpdateSchedule.fxml"),
     MENULOGINTEACHER("View/MenuLoginTeacher.fxml"),
     MAINMENUMINDERLOGGED("View/MainMenuMinderLogged.fxml"),
+    CONSULTSCHEDULE("View/SchedulesTable.fxml"),
+
     MAINMENUTEACHERLOGGED("View/MainMenuTeacherLogged.fxml");
 
     private String url;

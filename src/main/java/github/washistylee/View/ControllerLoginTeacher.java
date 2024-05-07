@@ -1,5 +1,4 @@
 package github.washistylee.View;
-
 import github.washistylee.App;
 import github.washistylee.Model.DAO.TeacherDAO;
 import github.washistylee.Model.Entitys.Person;
@@ -11,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,7 +27,6 @@ public class ControllerLoginTeacher extends Controller implements Initializable 
 
     @FXML
     private void goToLoginRegisterView() throws IOException {
-        System.out.println(Scenes.PANTALLALOGINREGISTER);
         App.currentController.changeScene(Scenes.PANTALLALOGINREGISTER, null);
     }
 
@@ -50,7 +47,7 @@ public class ControllerLoginTeacher extends Controller implements Initializable 
         if (verifyCredentialsTeacher(takeValueslogIn())) {
             teacher = tdao.findByMail(takeValueslogIn().getEmail());
             Sesion.getInstancia().logIn(teacher);
-            App.currentController.changeScene(Scenes.MAINMENUMINDERLOGGED, null);
+            App.currentController.changeScene(Scenes.MAINMENUTEACHERLOGGED, null);
         } else {
             AppController.showAlertForLogin();
         }
@@ -63,10 +60,11 @@ public class ControllerLoginTeacher extends Controller implements Initializable 
         TeacherDAO td = new TeacherDAO();
         Teacher teacher = td.verifyCredentialDAO(person.getEmail());
         System.out.println(teacher);
-        if (teacher.getEmail() != null && teacher.getEmail().equals(person.getEmail()) && teacher.getPassword() != null && teacher.getPassword().equals(person.getPassword())) {
+        if (teacher.getEmail() != null && teacher.getEmail().equals(person.getEmail())
+                && teacher.getPassword() != null
+                && teacher.getPassword().equals(person.getPassword())) {
             aux = true;
         }
-        System.out.println(aux);
         return aux;
     }
 
@@ -85,4 +83,5 @@ public class ControllerLoginTeacher extends Controller implements Initializable 
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
 }

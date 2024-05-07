@@ -5,46 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64502594-c131-4c8d-8738-4294ffef8383" name="Changes" comment="Carga inicial DAO">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerMainMenuMinderLogged.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenuMinderLogged.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/ChildDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/ChildDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/ScheduleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/ScheduleDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Child.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Child.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Sesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Sesion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestConsultas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestConsultas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Entitys/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/Model/Test/TestSchedule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerAddChild.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerAddChild.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerLoginMinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerLoginMinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerLoginTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerLoginTeacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerMainMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerMainMenuMinderLogged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerMainMenuMinderLogged.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerMainMenuTeacherLogged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerMainMenuTeacherLogged.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerRegisterMinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerRegisterMinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerRegisterTeacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerRegisterTeacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/DeleteChildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/DeleteChildController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/Scenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/Scenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/AddChild.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/AddChild.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/UpdateChildController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerUpdateChildOnMinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/AddChild.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/AddChildOnMinder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenuMinderLogged.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenuMinderLogged.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenuTeacherLogged.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenuTeacherLogged.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginMinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginMinder.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginTeacher.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginTeacher.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/UpdateChild.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/UpdateChildOnMinder.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/ChildDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/ChildDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/ScheduleDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/DAO/ScheduleDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Child.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Child.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Sesion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Sesion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestConsultas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestConsultas.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestINSERT.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestINSERT.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Schedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Entitys/Schedule.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestSchedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/Model/Test/TestSchedule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/AddChild.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/AddChild.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/AddChild.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/AppController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/AppController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerAddChild.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerAddChild.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerMainMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainMenu.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerLoginMinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerLoginMinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerLoginTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerLoginTeacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerMainMenuMinderLogged.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerMainMenuMinderLogged.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerRegisterMinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerRegisterMinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerRegisterTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/ControllerRegisterTeacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/DeleteChildController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/DeleteChildController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainMenuMinderLogged.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainMenuMinderLogged.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginMinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginMinder.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginTeacher.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginTeacher.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/Scenes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/Scenes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/UpdateChild.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/UpdateChildController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,23 +78,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "TimeMNG__Alertas__Niños",
-    "last_opened_file_path": "C:/Users/Washi/IdeaProjects/TimeMNG/src/main/resources/github/washistylee/View",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;juanv2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Washi/IdeaProjects/TimeMNG/src/main/resources/github/washistylee/View&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="github.washistylee.Model.Entitys" />
@@ -170,7 +172,34 @@
       <workItem from="1714152651336" duration="391000" />
       <workItem from="1714209238001" duration="7105000" />
       <workItem from="1714222406417" duration="2742000" />
-      <workItem from="1714292002033" duration="4519000" />
+      <workItem from="1714292002033" duration="8516000" />
+      <workItem from="1714332012296" duration="309000" />
+      <workItem from="1714372021236" duration="125000" />
+      <workItem from="1714372473841" duration="550000" />
+      <workItem from="1714373038653" duration="2578000" />
+      <workItem from="1714377174406" duration="840000" />
+      <workItem from="1714378482921" duration="348000" />
+      <workItem from="1714378893935" duration="1003000" />
+      <workItem from="1714382485159" duration="1328000" />
+      <workItem from="1714388293495" duration="4657000" />
+      <workItem from="1714410856514" duration="6755000" />
+      <workItem from="1714466296120" duration="5629000" />
+      <workItem from="1714487732826" duration="111000" />
+      <workItem from="1714487858787" duration="9494000" />
+      <workItem from="1714551383077" duration="1451000" />
+      <workItem from="1714580264072" duration="5417000" />
+      <workItem from="1714638810847" duration="6182000" />
+      <workItem from="1714668817592" duration="6494000" />
+      <workItem from="1714725886097" duration="807000" />
+      <workItem from="1714748475362" duration="3516000" />
+      <workItem from="1714976930558" duration="85000" />
+      <workItem from="1714977196162" duration="3169000" />
+      <workItem from="1714997771869" duration="641000" />
+      <workItem from="1715014148823" duration="2017000" />
+      <workItem from="1715064972215" duration="601000" />
+      <workItem from="1715065615201" duration="215000" />
+      <workItem from="1715067179644" duration="306000" />
+      <workItem from="1715067513014" duration="4687000" />
     </task>
     <task id="LOCAL-00001" summary="Hola">
       <option name="closed" value="true" />
@@ -207,21 +236,22 @@
           <line>17</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/github/washistylee/Model/DAO/ChildDAO.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/github/washistylee/View/UpdateChildController.java</url>
-          <line>45</line>
-          <properties class="github.washistylee.View.UpdateChildController" method="takeValuesChild">
+          <url>file://$PROJECT_DIR$/src/main/java/github/washistylee/View/ControllerUpdateChildOnTeacher.java</url>
+          <line>47</line>
+          <properties class="github.washistylee.View.ControllerUpdateChildOnTeacher" method="updateChildToBD">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="e" />
+        <watch expression="e" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

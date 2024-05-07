@@ -8,13 +8,21 @@ import java.util.List;
 
 public class Schedule {
     private Month month;
-    private LocalDate day;
-    private LocalTime hour;
+    private String day;
+    private String hour;
     private List <String> activitys;
     private Child child;
     private int ID;
 
-    public Schedule(Month month, LocalDate day, LocalTime hour, List<String> activitys, Child child, Integer ID) {
+    public Schedule(Month month, String day, String hour, List<String> activitys, Child child ) {
+        this.month = month;
+        this.day = day;
+        this.hour = hour;
+        this.activitys = activitys;
+        this.child = child;
+    }
+
+    public Schedule(Month month, String day, String hour, List<String> activitys, Child child, int ID) {
         this.month = month;
         this.day = day;
         this.hour = hour;
@@ -22,7 +30,6 @@ public class Schedule {
         this.child = child;
         this.ID = ID;
     }
-
 
     public int getID() {
         return ID;
@@ -52,19 +59,19 @@ public class Schedule {
         this.month = month;
     }
 
-    public LocalDate getDay() {
+    public String getDay() {
         return day;
     }
 
-    public void setDay(LocalDate day) {
+    public void setDay(String day) {
         this.day = day;
     }
 
-    public LocalTime getHour() {
+    public String getHour() {
         return hour;
     }
 
-    public void setHour(LocalTime hour) {
+    public void setHour(String hour) {
         this.hour = hour;
     }
 
@@ -77,14 +84,15 @@ public class Schedule {
     }
 
     public String getActivitiesAsString() {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < activitys.size(); i++) {
-            sb.append(activitys.get(i));
-            if (i < activitys.size() - 1) {
-                sb.append(", ");
+            String activiesAsString = "";
+            for (int i = 0; i < activitys.size(); i++) {
+                activiesAsString += activitys.get(i);
+                if (i < activitys.size() - 1) {
+                    activiesAsString += ", ";
+                }
             }
+
+            return activiesAsString;
         }
-        return sb.toString();
-    }
 
 }

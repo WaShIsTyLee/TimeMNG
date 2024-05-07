@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class ControllerAddChild extends Controller implements Initializable {
-    private Controller controller1;
 
     @FXML
     TextField textFieldName;

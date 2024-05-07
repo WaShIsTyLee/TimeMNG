@@ -1,0 +1,13 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿ó™ú
+a
+java:S2095$"FUse try-with-resources or close this "ChildDAO" in a "finally" clause.(†İÕüÿÿÿÿ
+œ
+java:S11863"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®Òêúÿÿÿÿ
+œ
+java:S11868"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘İŸüÿÿÿÿ
+p
+java:S1450"ZRemove the "controller1" field and declare it as a local variable in the relevant methods.(®ã’
+E	java:S106<"+Replace this use of System.out by a logger.(«¹œ¶şÿÿÿÿ
+E
+java:S1068"/Remove this unused "controller1" private field.(®ã’

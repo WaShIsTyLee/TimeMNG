@@ -1,0 +1,12 @@
+
+w
+java:S1488/"aImmediately return this expression instead of assigning it to the temporary variable "minderaux".(Äù…ì
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿ó™ú
+b
+java:S20957"GUse try-with-resources or close this "MinderDAO" in a "finally" clause.(‰ýøÈÿÿÿÿÿ
+—
+java:S1186H"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(÷’²É
+œ
+java:S1186M"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯®Òêúÿÿÿÿ
+œ
+java:S1186R"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•‘ÝŸüÿÿÿÿ
