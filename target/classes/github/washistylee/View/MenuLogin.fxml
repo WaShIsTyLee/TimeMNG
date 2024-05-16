@@ -23,7 +23,7 @@
             <Font name="Harrington" size="31.0" />
          </font>
       </Text>
-      <Text fill="#e5903c" layoutX="286.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesión " AnchorPane.bottomAnchor="248.0" AnchorPane.leftAnchor="286.0" AnchorPane.rightAnchor="192.291015625" AnchorPane.topAnchor="126.0">
+      <Text fill="#e5903c" layoutX="242.4" layoutY="139.866796875" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesión como Cuidador" AnchorPane.bottomAnchor="254.488671875" AnchorPane.leftAnchor="242.4" AnchorPane.rightAnchor="97.20937500000002" AnchorPane.topAnchor="121.4">
          <font>
             <Font name="Book Antiqua" size="20.0" />
          </font>

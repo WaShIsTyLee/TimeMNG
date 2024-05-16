@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * JavaFX Appten
  */
-public class  App extends Application {
+public class App extends Application {
     public static Scene scene;
     public static Stage stage;
     public static AppController currentController;

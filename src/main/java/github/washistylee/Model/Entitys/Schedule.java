@@ -1,10 +1,8 @@
 package github.washistylee.Model.Entitys;
 
-import java.sql.Time;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Schedule {
     private Month month;
@@ -94,5 +92,34 @@ public class Schedule {
 
             return activiesAsString;
         }
+        public static boolean isHour(String text){
+            boolean aux = false;
+            Pattern textP= Pattern.compile("([01]?[0-9]|2[0-3]):[0-5][0-9]");
+            Matcher textM = textP.matcher(text);
+            if (textM.matches()) {
+                aux = true;
+            }
+            return aux;
+        }
+    public static boolean isDay(String text) {
+        boolean aux = false;
+        Pattern textP = Pattern.compile("^(0?[1-9]|[1-9])$");
+        Matcher textM = textP.matcher(text);
+        if (textM.matches()) {
+            aux = true;
+        }
+        return aux;
+    }
+    public static boolean isValidMonth(String text) {
+        boolean aux = false;
+        Pattern textP = Pattern.compile("^(ENERO|FEBRERO|MARZO|ABRIL|MAYO|JUNIO|JULIO|AGOSTO|SEPTIEMBRE|OCTUBRE|NOVIEMBRE|DICIEMBRE)$");
+        Matcher textM = textP.matcher(text.toUpperCase());
+        if (textM.matches()) {
+            aux = true;
+        }
+        return aux;
+    }
 
 }
+
+

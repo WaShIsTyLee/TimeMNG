@@ -36,6 +36,15 @@ public class Teacher extends Person {
         this.subject = subject;
     }
 
+    public static boolean isString(String text) {
+        boolean aux = false;
+        Pattern textP= Pattern.compile("^[a-zA-Z]+$");
+        Matcher textM = textP.matcher(text);
+        if (textM.matches()) {
+            aux = true;
+        }
+        return aux;
+    }
     @Override
     public String toString() {
         return super.toString() + "Teacher{" +

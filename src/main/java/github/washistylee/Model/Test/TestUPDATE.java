@@ -23,21 +23,8 @@ public class TestUPDATE {
 
         TeacherDAO tdao = new TeacherDAO();
         tdao.save(teacher1);
-        tdao.update(teacher);
-
-        Minder md = new Minder("JUAN", "Solano", "juansan@gmail.com", "1", "6.30", childs);
-        MinderDAO mdao = new MinderDAO();
-        Minder md2 = new Minder("Maria", "Solano", "juansan@gmail.com", "1", "6.30", childs);
-
-        mdao.save(md2);
-        mdao.update(md);
 
 
-
-        ChildDAO cd = new ChildDAO();
-
-
-        System.out.println(mdao.findByMail(md.getEmail()));
 
     }
 }

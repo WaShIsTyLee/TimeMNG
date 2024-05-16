@@ -4,6 +4,10 @@ module github.washistylee {
     requires javafx.fxml;
     requires java.xml.bind;
     requires java.sql;
+    requires org.mariadb.jdbc;
+    requires org.bytedeco.opencv;
+    requires org.bytedeco.javacv;
+    requires java.desktop;
 
     opens github.washistylee.Model.Connection to java.xml.bind;
 

@@ -9,13 +9,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #010d25;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.washistylee.View.ControllerMainMenuTeacherLogged">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #010d25;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.washistylee.View.MainControllerMenu">
    <children>
       <ImageView fx:id="imageView" fitHeight="49.0" fitWidth="49.0" layoutX="831.0" layoutY="15.0" onMouseClicked="#logOut">
          <image>
             <Image url="@LogOut.png" />
          </image>
       </ImageView>
+      <Button fx:id="buttonAddChildrenModal" layoutX="14.0" layoutY="550.0" mnemonicParsing="false" onAction="#addChildModal" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #e5903c;" text="Agregar niño" textFill="WHITE" />
       <ImageView fitHeight="177.0" fitWidth="176.0" layoutX="14.0" layoutY="7.0">
          <image>
             <Image url="@LogoApp.png" />
@@ -26,12 +27,12 @@
             <Font name="Harrington" size="25.0" />
          </font>
       </Text>
-      <Text fx:id="text" fill="#e5903c" layoutX="226.0" layoutY="101.0" onDragDetected="#nameOfLogged" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="text" fill="#e5903c" layoutX="226.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font name="Harrington" size="25.0" />
          </font>
       </Text>
-      <TableView fx:id="tableView" editable="true" layoutX="14.0" layoutY="205.0" prefHeight="238.0" prefWidth="882.0" style="-fx-background-color: #e5903c;">
+      <TableView fx:id="tableView" editable="true" layoutX="14.0" layoutY="205.0" prefHeight="294.0" prefWidth="926.0" style="-fx-background-color: #e5903c;">
          <columns>
             <TableColumn fx:id="tableColumnIDchild" prefWidth="43.20001411437988" text="ID" />
             <TableColumn fx:id="tableColumnName" prefWidth="80.79998016357422" text="Nombre" />
@@ -40,9 +41,13 @@
             <TableColumn fx:id="tableColumnAge" minWidth="0.0" prefWidth="65.60003662109375" text="Edad" />
             <TableColumn fx:id="tableColumnObservation" prefWidth="160.00003051757812" text="Observacion" />
             <TableColumn fx:id="tableColumnDiseases" minWidth="0.0" prefWidth="164.79998779296875" text="Enfermedades" />
-            <TableColumn fx:id="tableColumnIDMinder" minWidth="0.0" prefWidth="170.39999999999998" text="ID Cuidador" />
+            <TableColumn fx:id="tableColumnID" minWidth="0.0" prefWidth="156.0" text="ID Profesor" />
+            <TableColumn fx:id="deleteColumn" minWidth="0.0" prefWidth="55.199951171875" text="Eliminar" />
          </columns>
       </TableView>
-      <Button fx:id="updateChildren" layoutX="15.0" layoutY="550.0" mnemonicParsing="false" onAction="#updateChildModal" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #e5903c;" text="Actualizar Niño" textFill="WHITE" />
+      <Button fx:id="buttonAddSchedule" layoutX="132.0" layoutY="551.0" mnemonicParsing="false" onAction="#addScheduledModal" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #e5903c;" text="Añadir Actividad" textFill="WHITE" />
+      <Button fx:id="buttonConsultActivities" layoutX="249.0" layoutY="551.0" mnemonicParsing="false" onAction="#consultScheduleModal" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color: #e5903c;" text="Consultar Actividades" textFill="WHITE" />
+      <ImageView fx:id="imageViewFoto" fitHeight="144.0" fitWidth="190.0" layoutX="599.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="buttonCamera" layoutX="493.0" layoutY="64.0" mnemonicParsing="false" text="Activar Camara" />
    </children>
 </AnchorPane>

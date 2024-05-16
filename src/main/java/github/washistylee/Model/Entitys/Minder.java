@@ -1,25 +1,32 @@
 package github.washistylee.Model.Entitys;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class Minder extends Person{
+public class Minder extends Person {
 
-    private String hours;
+    private float hours;
     private List<Child> myChilds;
+    private byte[] photo;
 
-    public Minder(String name, String surname, String email, String password, String hours, List<Child> myChilds) {
+    public byte[] getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(byte[] photo) {
+        this.photo = photo;
+    }
+
+    public Minder(String name, String surname, String email, String password, float hours, List<Child> myChilds) {
         super(name, surname, email, password);
         this.hours = hours;
         this.myChilds = myChilds;
     }
 
-    public String getHours() {
+    public float getHours() {
         return hours;
     }
 
-    public void setHours(String hours) {
+    public void setHours(float hours) {
         this.hours = hours;
     }
 
@@ -31,20 +38,27 @@ public class Minder extends Person{
         this.myChilds = myChilds;
     }
 
-    public Minder(){
+    public Minder() {
 
+    }
+
+    public static boolean isNumber(String text) {
+        boolean aux = false;
+        String regex = "\\d+(\\.\\d+)?";
+        if (text.matches(regex)) {
+            aux = true;
+        }
+        return aux;
     }
 
     @Override
     public String toString() {
         return
                 super.toString() + "Minder{" +
-                "hours=" + hours +
-                ", myChilds=" + myChilds +
-                '}';
+                        "hours=" + hours +
+                        ", myChilds=" + myChilds +
+                        '}';
     }
-
-
 
 
 }

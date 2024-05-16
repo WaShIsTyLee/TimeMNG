@@ -175,6 +175,22 @@ public class Child extends Person{
 
         return diseasesAsString;
     }
+    public static boolean isString(String text) {
+        boolean aux = false;
+        String regex = "^[a-zA-Z\\s]+$";
+        if (text.matches(regex)) {
+            aux = true;
+        }
+        return aux;
+    }
+    public static boolean isNumber(String text) {
+        boolean aux = false;
+        String regex = "^(?:100|[1-9]?[0-9])$";
+        if (text.matches(regex)) {
+            aux = true;
+        }
+        return aux;
+    }
 
 
 }

@@ -1,7 +1,7 @@
 package github.washistylee.Model.DAO;
 
 import github.washistylee.Model.Connection.ConnectionDB;
-import github.washistylee.Model.Entitys.Child;
+import github.washistylee.Model.Entitys.*;
 
 import java.io.IOException;
 import java.sql.*;
@@ -18,6 +18,14 @@ public class ChildDAO implements DAO<Child, String> {
     private final static String DELETE = "DELETE FROM Niños  WHERE ID = ?";
     private final static String UPDATE = "UPDATE Niños SET Nombre=? , Apellidos=? , Edad = ? , Clase=? , Observacion=? , ID_Profesor=?,  Enfermedades=? WHERE ID=?";
 
+    TeacherDAO tdao = new TeacherDAO();
+    MinderDAO mdao = new MinderDAO();
+
+    /**
+     * Saves the child to the database.
+     * @param child The child object to be saved.
+     * @return The saved child object.
+     */
     @Override
     public Child save(Child child) {
         Child childaux = child;
@@ -42,9 +50,12 @@ public class ChildDAO implements DAO<Child, String> {
         return childaux;
     }
 
-
+    /**
+     * Finds a child by their ID.
+     * @param key The ID of the child to find.
+     * @return The child object if found, otherwise null.
+     */
     public Child findById(Integer key) {
-
         Child childaux = null;
         TeacherDAO tdao = new TeacherDAO();
         MinderDAO mdao = new MinderDAO();
@@ -54,7 +65,7 @@ public class ChildDAO implements DAO<Child, String> {
                 pst.setInt(1, key);
                 ResultSet res = pst.executeQuery();
                 if (res.next()) {
-                    childaux=new Child();
+                    childaux = new Child();
                     childaux.setId(res.getInt("ID"));
                     childaux.setName(res.getString("Nombre"));
                     childaux.setSurname(res.getString("Apellidos"));
@@ -63,21 +74,24 @@ public class ChildDAO implements DAO<Child, String> {
                     String[] diseasesArray = diseasesString.split(",");
                     List<String> diseasesList = Arrays.asList(diseasesArray);
                     childaux.setDiseases(diseasesList);
-                    childaux.setTeacher(tdao.findByMail(res.getString("ID_Profesor")));
-                    childaux.setMinder(mdao.findByMail(res.getString("ID_Cuidador")));
                     childaux.setAge(res.getInt("Edad"));
                     childaux.setClassroom(res.getString("Clase"));
-
+                    childaux.setTeacher(tdao.findByMail(res.getString("ID_Profesor")));
+                    childaux.setMinder(mdao.findByMail(res.getString("ID_Cuidador")));
                 }
                 res.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
-
         return childaux;
     }
 
+    /**
+     * Deletes a child from the database.
+     * @param child The child object to delete.
+     * @return The child object if deletion is successful, otherwise null.
+     */
     @Override
     public Child delete(Child child) {
         if (child != null || child.getId() > 0) {
@@ -101,6 +115,11 @@ public class ChildDAO implements DAO<Child, String> {
         return null;
     }
 
+    /**
+     * Updates the information of a child in the database.
+     * @param child The child object with updated information.
+     * @return The updated child object.
+     */
     public Child update(Child child) {
         ChildDAO cdao = new ChildDAO();
         try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(UPDATE)) {
@@ -155,7 +174,7 @@ public class ChildDAO implements DAO<Child, String> {
             pst.setString(6, teacherEmailToUpdate);
 
             String diseasesStringToUpdate;
-            if (child.getDiseasesString() == null || child.getDiseasesString().isEmpty()) {
+            if (child.getDiseases() == null || child.getDiseasesString().isEmpty()) {
                 diseasesStringToUpdate = lastChild.getDiseasesString();
             } else {
                 diseasesStringToUpdate = child.getDiseasesString();
@@ -171,6 +190,12 @@ public class ChildDAO implements DAO<Child, String> {
 
         return child;
     }
+    /**
+     * Finds all children associated with a teacher's email address.
+     * @param key The email address of the teacher.
+     * @return An ArrayList containing all children associated with the specified teacher.
+     */
+
     public ArrayList<Child> findChildByTeacherMail(String key) {
         Child childaux;
         MinderDAO mdao = new MinderDAO();
@@ -186,6 +211,7 @@ public class ChildDAO implements DAO<Child, String> {
                     childaux.setName(res.getString("Nombre"));
                     childaux.setMinder(mdao.findByMail(res.getString("ID_Cuidador")));
                     childaux.setObservation(res.getString("Observacion"));
+                    childaux.setTeacher((Teacher)Sesion.getInstancia().getUsuarioIniciado());
                     childaux.setClassroom(res.getString("Clase"));
                     String diseasesString = res.getString("Enfermedades");
                     String[] diseasesArray = diseasesString.split(",");
@@ -202,7 +228,11 @@ public class ChildDAO implements DAO<Child, String> {
         return teacherChilds;
     }
 
-
+    /**
+     * Finds all children associated with a minder's email address.
+     * @param key The email address of the minder.
+     * @return An ArrayList containing all children associated with the specified minder.
+     */
     public ArrayList<Child> findChildByMinderMail(String key) {
         Child childaux;
         ScheduleDAO sdao = new ScheduleDAO();
@@ -221,6 +251,7 @@ public class ChildDAO implements DAO<Child, String> {
                     childaux.setTeacher(tdao.findByMail(res.getString("ID_Profesor")));
                     childaux.setObservation(res.getString("Observacion"));
                     childaux.setClassroom(res.getString("Clase"));
+                    childaux.setMinder((Minder) Sesion.getInstancia().getUsuarioIniciado());
                     String diseasesString = res.getString("Enfermedades");
                     String[] diseasesArray = diseasesString.split(",");
                     List<String> diseasesList = Arrays.asList(diseasesArray);
@@ -245,4 +276,5 @@ public class ChildDAO implements DAO<Child, String> {
     public static ChildDAO build() {
         return new ChildDAO();
     }
+
 }

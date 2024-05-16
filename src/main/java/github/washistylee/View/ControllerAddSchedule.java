@@ -31,8 +31,10 @@ public class ControllerAddSchedule extends Controller implements Initializable {
     TextField textFieldIDChild;
     @FXML
     Button button;
-
-    public Schedule takeValuesAddSchedule() {
+    /**
+     * Retrieves input values from UI fields to create a Schedule object for adding a new schedule.
+     * @return The Schedule object created with the input values.
+     */    public Schedule takeValuesAddSchedule() {
         Schedule aux;
         ChildDAO cdao = new ChildDAO();
         int childID = (textFieldIDChild.getText().equals("")) ? 0 : Integer.valueOf(textFieldIDChild.getText());
@@ -49,6 +51,9 @@ public class ControllerAddSchedule extends Controller implements Initializable {
         return aux;
     }
 
+    /**
+     * Adds the Schedule object to the database.
+     */
     public void addScheduleToBD() {
         ScheduleDAO sdao = new ScheduleDAO();
         ChildDAO cdao = new ChildDAO();
@@ -58,7 +63,6 @@ public class ControllerAddSchedule extends Controller implements Initializable {
             sdao.save(schedule);
         } else {
             AppController.showAlertForUpdateChild();
-            //cambiar esta alerta
         }
     }
 
@@ -66,20 +70,19 @@ public class ControllerAddSchedule extends Controller implements Initializable {
     public void onOpen(Object input) throws IOException {
 
     }
-
-    @Override
-    public void onClose(Object output) throws IOException {
-
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        comboBoxMonth.setItems(FXCollections.observableArrayList("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-                "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"));
-        comboBoxDays.setItems(FXCollections.observableArrayList(
-                1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-                11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-                21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
-        ));
-    }
+    /**
+     * Initializes the ComboBoxes for selecting month and day.
+     * @param url            The location used to resolve relative paths for the root object, or null if the location is not known.
+     * @param resourceBundle The resources used to localize the root object, or null if the root object was not localized.
+     */
+        @Override
+        public void initialize(URL url, ResourceBundle resourceBundle) {
+            comboBoxMonth.setItems(FXCollections.observableArrayList("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+                    "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"));
+            comboBoxDays.setItems(FXCollections.observableArrayList(
+                    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                    11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+                    21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+            ));
+        }
 }
