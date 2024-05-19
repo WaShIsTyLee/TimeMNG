@@ -14,7 +14,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #010d25;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.washistylee.View.ControllerAddSchedule">
    <children>
       <TextField fx:id="textFieldIDChild" layoutX="245.0" layoutY="233.0" promptText="ID Niño" />
-      <Button fx:id="button" layoutX="368.0" layoutY="287.0" mnemonicParsing="false" onAction="#addScheduleToBD" text="Crear Horario">
+      <Button fx:id="button" layoutX="368.0" layoutY="287.0" mnemonicParsing="false" onAction="#backToMainMenu" text="Crear Horario">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

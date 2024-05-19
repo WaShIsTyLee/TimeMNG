@@ -4,8 +4,6 @@ import github.washistylee.App;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,31 +11,38 @@ import java.util.ResourceBundle;
 
 public class ControllerLoginRegister extends Controller implements Initializable {
     @FXML
-    Button buttonLoginMinder;
+    private Button buttonLoginMinder;
     @FXML
-    Button buttonRegisterMinder;
+    private Button buttonRegisterMinder;
     @FXML
-    Button buttonLoginTeacher;
-    @FXML
-    Button buttonRegisterTeacher;
+    private Button buttonRegisterTeacher;
 
 
-
+    /**
+     * Navigates to the login page for a Minder account.
+     *
+     * @throws IOException If an I/O error occurs.
+     */
     @FXML
     private void goToLoginMinder() throws IOException {
-        System.out.println(Scenes.MENULOGINMINDER);
-        App.currentController.changeScene(Scenes.MENULOGINMINDER,null);
+        System.out.println(Scenes.MENULOGIN);
+        App.currentController.changeScene(Scenes.MENULOGIN,null);
     }
-
-    @FXML
-    private void goToLoginTeacher() throws IOException {
-        App.currentController.changeScene(Scenes.MENULOGINTEACHER,null);
-    }
+    /**
+     * Navigates to the registration page for a Minder account.
+     *
+     * @throws IOException If an I/O error occurs.
+     */
     @FXML
     private void goToRegisterMinder() throws IOException {
         System.out.println(Scenes.MENUREGISTERMINDER);
         App.currentController.changeScene(Scenes.MENUREGISTERMINDER,null);
     }
+    /**
+     * Navigates to the registration page for a Teacher account.
+     *
+     * @throws IOException If an I/O error occurs.
+     */
     @FXML
     private void goToRegisterTeacher() throws IOException {
         System.out.println(Scenes.MENUREGISTERTEACHER);
@@ -47,11 +52,6 @@ public class ControllerLoginRegister extends Controller implements Initializable
 
     @Override
     public void onOpen(Object input) throws IOException {
-
-    }
-
-    @Override
-    public void onClose(Object output) {
 
     }
 

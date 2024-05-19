@@ -17,36 +17,45 @@ public class TeacherDAO implements DAO <Teacher, String> {
     private final static String FINDBYEMAIL = "SELECT p.Nombre, p.Email, p.Apellidos, p.Contraseña, p.ClaseImpartida FROM Profesor AS p WHERE p.Email = ?";
     private final static String VERIFYTEACHERMAILIFEXIST = "SELECT p.Email FROM Profesor AS p WHERE p.Email = ?";
     private final static String VERIFYCREDENTIALS = "SELECT p.Email, p.Contraseña FROM Profesor AS p WHERE p.Email = ?";
-    private final static String DELETE = "DELETE  FROM Profesor  WHERE Email = ?";
-    private final static String UPDATE = "UPDATE Profesor SET Nombre=? , Apellidos=? , ClaseImpartida=? , Email=? , Contraseña=? WHERE Email=?";
 
-
+    /**
+     * Saves a teacher to the database.
+     *
+     * @param teacher The teacher to be saved.
+     * @return The saved teacher object.
+     */
     @Override
-    public Teacher save(Teacher teacher) {
-        Teacher teacheraux = teacher;
-        if (teacher != null && teacher.getEmail() != null) {
-            teacheraux = findByMail(teacheraux.getEmail());
-            try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
-                pst.setString(1, teacher.getName());
-                pst.setString(2, teacher.getSurname());
-                pst.setString(3, teacher.getSubject());
-                pst.setString(4, teacher.getEmail());
-                pst.setString(5, teacher.getPassword());
-                pst.executeUpdate();
+        public Teacher save(Teacher teacher) {
+            Teacher teacheraux = teacher;
+            if (teacher != null && teacher.getEmail() != null) {
+                teacheraux = findByMail(teacheraux.getEmail());
+                try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
+                    pst.setString(1, teacher.getName());
+                    pst.setString(2, teacher.getSurname());
+                    pst.setString(3, teacher.getSubject());
+                    pst.setString(4, teacher.getEmail());
+                    pst.setString(5, teacher.getPassword());
+                    pst.executeUpdate();
 
-                if (teacher.getMyChilds() != null) {
-                    for (Child c : teacher.getMyChilds()) {
-                        ChildDAO.build().save(c);
+                    if (teacher.getMyChilds() != null) {
+                        for (Child c : teacher.getMyChilds()) {
+                            ChildDAO.build().save(c);
+                        }
                     }
+
+                } catch (SQLException e) {
+                    e.printStackTrace();
                 }
 
-            } catch (SQLException e) {
-                e.printStackTrace();
             }
-
-        }
-        return teacheraux;
+            return teacheraux;
     }
+    /**
+     * Finds a teacher by their email in the database.
+     *
+     * @param key The email of the teacher to find.
+     * @return The teacher object if found, otherwise returns null.
+     */
     public Teacher findByMail(String key) {
 
         Teacher teacheraux = new Teacher();
@@ -70,6 +79,12 @@ public class TeacherDAO implements DAO <Teacher, String> {
         return teacheraux;
     }
 
+    /**
+     * Verifies if a teacher email already exists in the database.
+     *
+     * @param key The email to verify.
+     * @return The teacher object with the given email if it exists, otherwise returns null.
+     */
     public Teacher verifyTeacherEmailIfExist(String key) {
         Teacher teacheraux = null;
         if (key != null) {
@@ -88,7 +103,12 @@ public class TeacherDAO implements DAO <Teacher, String> {
         return teacheraux;
     }
 
-
+    /**
+     * Verifies teacher credentials by checking if the provided email and password match those stored in the database.
+     *
+     * @param key The email to verify.
+     * @return The teacher object with the provided email and password if they match, otherwise returns a teacher object with empty fields.
+     */
     public Teacher verifyCredentialDAO(String key) {
         Teacher teacheraux = new Teacher();
         if (key != null) {
@@ -108,39 +128,9 @@ public class TeacherDAO implements DAO <Teacher, String> {
     }
 
 
-    public Teacher update(Teacher teacher) {
-        Teacher teacheraux = teacher;
-        try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(UPDATE)) {
-            pst.setString(1, teacher.getName());
-            pst.setString(2, teacher.getSurname());
-            pst.setString(3, teacher.getSubject());
-            pst.setString(4, teacher.getEmail());
-                if (teacher.getPassword() == null) {
-                //TOCAR ESTO PARA QUE SE HAGA BUCLE AL METER CONTRASEÑA A NULO
-                System.out.println("CABRON NO METAS CONTRASÑEA VACIA");
-            } else {
-                pst.setString(5, teacher.getPassword());
-            }
-            pst.setString(6,teacher.getEmail());
-            pst.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return teacheraux;
-    }
-
 
     @Override
     public Teacher delete(Teacher teacher) {
-        if (teacher != null || teacher.getEmail() != null) {
-            try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(DELETE)) {
-                pst.setString(1, teacher.getEmail());
-                pst.executeUpdate();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
         return teacher;
     }
 
@@ -157,5 +147,8 @@ public class TeacherDAO implements DAO <Teacher, String> {
     @Override
     public void close() throws IOException {
 
+    }
+    public static TeacherDAO build() {
+        return new TeacherDAO();
     }
 }

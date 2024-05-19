@@ -1,8 +1,13 @@
 package github.washistylee.Model.Entitys;
 
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+
 
 public class Person {
     protected String name;
@@ -64,6 +69,22 @@ public class Person {
         Person person = (Person) o;
         return Objects.equals(getEmail(), person.getEmail());
     }
+
+    public static String hashPassword(String pass) {
+        try {
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+            byte[] hashedBytes = digest.digest(pass.getBytes());
+
+            StringBuilder stringBuilder = new StringBuilder();
+            for (byte b : hashedBytes) {
+                stringBuilder.append(String.format("%02x", b));
+            }
+            return stringBuilder.toString();
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("SHA-256 algorithm not found", e);
+        }
+    }
+
 
     @Override
     public String toString() {
