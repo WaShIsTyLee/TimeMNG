@@ -18,20 +18,41 @@ public  class MinderDAO implements DAO<Minder, String> {
     private final static String FINDBYEMAIL = "SELECT c.Nombre, c.Email, c.Apellidos, c.Contraseña, c.Horas FROM Cuidador AS c WHERE c.Email = ?";
     private final static String DELETE = "DELETE  FROM Cuidador  WHERE Email = ?";
     private final static String VERIFYCREDENTIALS = "SELECT c.Email, c.Contraseña FROM Cuidador AS c WHERE c.Email = ?";
-    private final static String INSERTPHOTO = "INSERT INTO Cuidador (Foto) VALUES (?)";
-    private final static String UPDATE = "UPDATE Cuidador SET Nombre=? , Apellidos=? , Horas=? , Email=? , Contraseña=? WHERE Email=?";
+    private final static String UPDATEPHOTO = "UPDATE Cuidador SET Foto = ? WHERE Email = ?";
+    private final static String GETPHOTO = "SELECT Foto FROM Cuidador WHERE Email = ?";
 
 
-    public void savePhoto(Minder minder) {
+    public byte[] getPhotoByEmail(Minder minder) {
+        byte[] imageBytes = null;
+
+        try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(GETPHOTO, Statement.RETURN_GENERATED_KEYS)) {
+            pst.setString(1, minder.getEmail());
+            ResultSet rs = pst.executeQuery();
+            if (rs.next()) {
+                imageBytes = rs.getBytes("Foto");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return imageBytes;
+    }
+
+    /**
+     * Saves photo on Minder
+     * @param minder
+     */
+    public void updatePhoto(Minder minder) {
         if (minder != null) {
-            try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(INSERTPHOTO, Statement.RETURN_GENERATED_KEYS)) {
+            try (PreparedStatement pst = ConnectionDB.getConnection().prepareStatement(UPDATEPHOTO, Statement.RETURN_GENERATED_KEYS)) {
                 pst.setBytes(1, minder.getPhoto());
+                pst.setString(2, minder.getEmail());
                 pst.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
     }
+
     /**
      * Saves a new minder to the database.
      *

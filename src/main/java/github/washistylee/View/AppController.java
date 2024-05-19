@@ -20,7 +20,7 @@ public  class AppController extends Controller implements Initializable {
 
 
     @FXML
-    BorderPane borderPane;
+    private BorderPane borderPane;
     private Controller centerController;
 
     @FXML
@@ -87,7 +87,7 @@ public  class AppController extends Controller implements Initializable {
 
     /**
      * Shows an error alert for login.
-     * <p>The alert indicates that the password or email does not match, prompting the user to try again.
+     * The alert indicates that the password or email does not match, prompting the user to try again.
      */
     @FXML
     public static void showAlertForLogin() {

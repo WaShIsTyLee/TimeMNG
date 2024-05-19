@@ -11,11 +11,11 @@ import java.util.ResourceBundle;
 
 public class ControllerLoginRegister extends Controller implements Initializable {
     @FXML
-    Button buttonLoginMinder;
+    private Button buttonLoginMinder;
     @FXML
-    Button buttonRegisterMinder;
+    private Button buttonRegisterMinder;
     @FXML
-    Button buttonRegisterTeacher;
+    private Button buttonRegisterTeacher;
 
 
     /**

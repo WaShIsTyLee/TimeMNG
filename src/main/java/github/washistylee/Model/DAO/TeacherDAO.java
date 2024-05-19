@@ -17,8 +17,6 @@ public class TeacherDAO implements DAO <Teacher, String> {
     private final static String FINDBYEMAIL = "SELECT p.Nombre, p.Email, p.Apellidos, p.Contraseña, p.ClaseImpartida FROM Profesor AS p WHERE p.Email = ?";
     private final static String VERIFYTEACHERMAILIFEXIST = "SELECT p.Email FROM Profesor AS p WHERE p.Email = ?";
     private final static String VERIFYCREDENTIALS = "SELECT p.Email, p.Contraseña FROM Profesor AS p WHERE p.Email = ?";
-    private final static String DELETE = "DELETE  FROM Profesor  WHERE Email = ?";
-    private final static String UPDATE = "UPDATE Profesor SET Nombre=? , Apellidos=? , ClaseImpartida=? , Email=? , Contraseña=? WHERE Email=?";
 
     /**
      * Saves a teacher to the database.

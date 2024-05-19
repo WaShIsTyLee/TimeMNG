@@ -2,8 +2,10 @@ package github.washistylee.View;
 
 import github.washistylee.App;
 import github.washistylee.Model.DAO.ChildDAO;
+import github.washistylee.Model.DAO.MinderDAO;
 import github.washistylee.Model.DAO.TeacherDAO;
 import github.washistylee.Model.Entitys.*;
+import github.washistylee.Model.Utils.Bytes;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,20 +16,19 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.TextFieldTableCell;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class MainControllerMenu extends Controller implements Initializable {
-    @FXML
-    Button buttonCamera;
-    @FXML
-    ImageView imageViewFoto;
     @FXML
     private Text text;
     @FXML
@@ -57,16 +58,60 @@ public class MainControllerMenu extends Controller implements Initializable {
     @FXML
     private TableColumn<Child, Void> deleteColumn = new TableColumn<>("Delete");
 
+    private File imageFile;
+    @FXML
+    private ImageView photoImageView;
+    @FXML
+    private Button button;
 
     TeacherDAO tDao = new TeacherDAO();
     ChildDAO cDao = new ChildDAO();
-
     private ObservableList<Child> child;
 
+    private void setImageInMenu() {
+
+
+
+    }
+
+
+    @FXML
+    private void loadImage() {
+        MinderDAO mdao = new MinderDAO();
+        Minder minder = new Minder();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Seleccionar Imagen");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg")
+        );
+        if (photoImageView != null && photoImageView.getScene() != null) {
+            Stage stage = (Stage) photoImageView.getScene().getWindow();
+            File imageFile = fileChooser.showOpenDialog(stage);
+            if (imageFile != null) {
+                try (InputStream is = new FileInputStream(imageFile)) {
+                    Image image = new Image(is);
+                    photoImageView.setImage(image);
+                    minder.setPhoto(Bytes.convertImageToBytes(imageFile));
+                    minder.setEmail(Sesion.getInstancia().getUsuarioIniciado().getEmail());
+                    mdao.updatePhoto(minder);
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            System.out.println("photoImageView o su escena son nulos");
+        }
+    }
+
+
     /**
-     *This method is called when something is opened. It retrieves the currently logged-in user,
+     * This method is called when stage is opened. It retrieves the currently logged-in user,
      * checks if the user is a Minder or a Teacher, and sets appropriate text messages and loads
      * data into a JavaFX TableView accordingly.
+     *
      * @param input
      * @throws IOException
      */
@@ -81,6 +126,11 @@ public class MainControllerMenu extends Controller implements Initializable {
             child = cDao.findChildByMinderMail(Sesion.getInstancia().getUsuarioIniciado().getEmail());
             this.child = FXCollections.observableArrayList(child);
             tableView.setItems(this.child);
+            MinderDAO mdao = new MinderDAO();
+            Image image = null;
+            byte[] imageBytes = mdao.getPhotoByEmail((Minder)Sesion.getInstancia().getUsuarioIniciado());
+            image = new Image(new ByteArrayInputStream(imageBytes));
+            photoImageView.setImage(image);
         } else {
             Teacher teacher = (Teacher) personaux;
             text.setText("Bienvenido " + Sesion.getInstancia().getUsuarioIniciado().getName() + " tu asignatura impartida es " +
@@ -88,6 +138,10 @@ public class MainControllerMenu extends Controller implements Initializable {
             child = cDao.findChildByTeacherMail(Sesion.getInstancia().getUsuarioIniciado().getEmail());
             this.child = FXCollections.observableArrayList(child);
             tableView.setItems(this.child);
+            photoImageView.setDisable(true);
+            photoImageView.setOpacity(0);
+            button.setOpacity(0);
+            button.setDisable(true);
 
         }
     }
@@ -95,6 +149,7 @@ public class MainControllerMenu extends Controller implements Initializable {
     /**
      * Initializes the controller upon loading the corresponding view. It checks the type of the
      * logged-in user and calls specific initialization methods accordingly.
+     *
      * @param url
      * @param resourceBundle
      */
@@ -175,6 +230,7 @@ public class MainControllerMenu extends Controller implements Initializable {
         });
 
     }
+
     /**
      * Initializes the UI components and behavior specific to a Teacher user.
      */

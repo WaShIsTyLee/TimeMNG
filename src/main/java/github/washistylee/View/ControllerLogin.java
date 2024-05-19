@@ -23,10 +23,7 @@ public class ControllerLogin extends Controller implements Initializable {
     private TextField textFieldUser;
     @FXML
     private PasswordField passwordField;
-    @FXML
-    Button button;
-    @FXML
-    ImageView imageView;
+
 
     /**
      * Changes the scene to the login/register view.

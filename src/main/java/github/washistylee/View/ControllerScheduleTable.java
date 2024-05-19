@@ -23,21 +23,21 @@ import java.util.ResourceBundle;
 
 public class ControllerScheduleTable extends Controller implements Initializable {
     @FXML
-    TableView tableView;
+    private TableView tableView;
     @FXML
-    TableColumn<Schedule, String> tableColumnIDChild;
+    private TableColumn<Schedule, String> tableColumnIDChild;
     @FXML
-    TableColumn<Schedule, String> tableColumnHour;
+    private TableColumn<Schedule, String> tableColumnHour;
     @FXML
-    TableColumn<Schedule, String> tableColumnMonth;
+    private TableColumn<Schedule, String> tableColumnMonth;
     @FXML
-    TableColumn<Schedule, String> tableColumnDays;
+    private TableColumn<Schedule, String> tableColumnDays;
     @FXML
-    TableColumn<Schedule, String> tableColumnActivities;
+    private TableColumn<Schedule, String> tableColumnActivities;
     @FXML
-    TableColumn<Schedule, String> tableColumnChildName;
+    private TableColumn<Schedule, String> tableColumnChildName;
     @FXML
-    TableColumn<Schedule, String> tableColumnID;
+    private TableColumn<Schedule, String> tableColumnID;
     private ObservableList<Schedule> schedule;
 
     /**

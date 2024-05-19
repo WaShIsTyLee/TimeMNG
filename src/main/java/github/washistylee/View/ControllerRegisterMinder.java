@@ -19,20 +19,19 @@ import java.util.ResourceBundle;
 public class ControllerRegisterMinder extends Controller implements Initializable {
 
     @FXML
-    TextField textFieldName;
+    private TextField textFieldName;
     @FXML
-    TextField textFieldSurname;
+    private TextField textFieldSurname;
     @FXML
-    TextField textFieldEmail;
-
+    private TextField textFieldEmail;
     @FXML
-    TextField textFieldHours;
+    private TextField textFieldHours;
     @FXML
-    ImageView imageView;
+    private ImageView imageView;
     @FXML
-    Button buttonRegisterMinder;
+    private Button buttonRegisterMinder;
     @FXML
-    PasswordField passwordField;
+    private PasswordField passwordField;
 
 
     @FXML

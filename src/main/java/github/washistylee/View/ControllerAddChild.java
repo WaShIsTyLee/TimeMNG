@@ -23,22 +23,21 @@ import java.util.ResourceBundle;
 public class ControllerAddChild extends Controller implements Initializable {
 
     @FXML
-    TextField textFieldName;
+    private TextField textFieldName;
     @FXML
-    TextField textFieldSurname;
+    private TextField textFieldSurname;
     @FXML
-    TextField textFieldAge;
+    private TextField textFieldAge;
     @FXML
-    TextField textFieldDiseases;
+    private TextField textFieldDiseases;
     @FXML
-    TextField textFieldObservation;
+    private TextField textFieldObservation;
     @FXML
-    TextField textFielClass;
+    private TextField textFielClass;
     @FXML
-    TextField textFieldEmailProfesor;
-
+    private TextField textFieldEmailProfesor;
     @FXML
-    Button buttonAddChildtoBD;
+    private Button buttonAddChildtoBD;
 
 
     /**
@@ -58,8 +57,7 @@ public class ControllerAddChild extends Controller implements Initializable {
 
         }
         int childAge;
-        if (textFieldAge.getText().
-                equals("")) {
+        if (textFieldAge.getText().equals("")) {
             childAge = -1;
         } else {
             if (!Child.isNumber(textFieldAge.getText())) {

@@ -19,19 +19,19 @@ import java.util.ResourceBundle;
 public class ControllerRegisterTeacher extends Controller implements Initializable {
 
     @FXML
-    TextField textFieldName;
+    private TextField textFieldName;
     @FXML
-    TextField textFieldSurname;
+    private TextField textFieldSurname;
     @FXML
-    TextField textFieldEmail;
+    private TextField textFieldEmail;
     @FXML
-    PasswordField passwordField;
+    private PasswordField passwordField;
     @FXML
-    TextField textFieldSubject;
+    private TextField textFieldSubject;
     @FXML
-    ImageView imageView;
+    private ImageView imageView;
     @FXML
-    Button buttonRegisterTeacher;
+    private Button buttonRegisterTeacher;
 
     /**
      * Navigates to the login/register view.

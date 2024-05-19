@@ -23,6 +23,7 @@ public class ScheduleDAO implements DAO<Schedule, String> {
 
     /**
      * Saves a schedule in the database.
+     *
      * @param schedule The schedule to be saved.
      * @return The saved schedule.
      */
@@ -44,6 +45,7 @@ public class ScheduleDAO implements DAO<Schedule, String> {
 
     /**
      * Deletes a schedule from the database.
+     *
      * @param entity The schedule to be deleted.
      * @return The deleted schedule.
      */
@@ -108,8 +110,10 @@ public class ScheduleDAO implements DAO<Schedule, String> {
 
         return schedule;
     }
+
     /**
      * Retrieves all schedules associated with a given child from the database.
+     *
      * @param key The child whose schedules are to be retrieved.
      * @return An ArrayList of schedules associated with the child.
      */
@@ -152,56 +156,56 @@ public class ScheduleDAO implements DAO<Schedule, String> {
      * @param schedule The schedule with updated information.
      * @return The updated schedule.
      */
-        public Schedule update(Schedule schedule) {
-            ScheduleDAO sdao = new ScheduleDAO();
-            Connection conn = ConnectionDB.getConnection();
+    public Schedule update(Schedule schedule) {
+        ScheduleDAO sdao = new ScheduleDAO();
+        Connection conn = ConnectionDB.getConnection();
 
-            try (PreparedStatement pst = conn.prepareStatement(UPDATE)) {
-                Schedule lastSchedule = sdao.findAllByChild(schedule.getChild());
+        try (PreparedStatement pst = conn.prepareStatement(UPDATE)) {
+            Schedule lastSchedule = sdao.findAllByChild(schedule.getChild());
 
-                String activitiesToUpdate;
-                if (schedule.getActivitys() == null || schedule.getActivitys().isEmpty()) {
+            String activitiesToUpdate;
+            if (schedule.getActivitys() == null || schedule.getActivitys().isEmpty()) {
 
-                    activitiesToUpdate = lastSchedule.getActivitiesAsString();
-                } else {
-                    activitiesToUpdate = schedule.getActivitiesAsString();
-                }
-                pst.setString(1, activitiesToUpdate);
-
-                String hoursToUpdate;
-                if (schedule.getHour() == null || schedule.getHour().isEmpty()) {
-                    hoursToUpdate = lastSchedule.getHour();
-                } else {
-                    hoursToUpdate = schedule.getHour();
-                }
-                pst.setString(2, hoursToUpdate);
-
-                String daysToUpdate;
-                if (schedule.getDay() == null || schedule.getDay().isEmpty()) {
-                    daysToUpdate = lastSchedule.getDay();
-                } else {
-                    daysToUpdate = schedule.getDay();
-                }
-                pst.setString(3, daysToUpdate);
-
-                Month monthtoUpdate;
-                if (schedule.getMonth() == null) {
-                    monthtoUpdate = lastSchedule.getMonth();
-                } else {
-                    monthtoUpdate = schedule.getMonth();
-                }
-                String month = monthtoUpdate.toString().toUpperCase();
-                pst.setString(4, month);
-
-                pst.setInt(5, schedule.getID());
-
-                pst.executeUpdate();
-            } catch (SQLException e) {
-                e.printStackTrace();
+                activitiesToUpdate = lastSchedule.getActivitiesAsString();
+            } else {
+                activitiesToUpdate = schedule.getActivitiesAsString();
             }
+            pst.setString(1, activitiesToUpdate);
 
-            return schedule;
+            String hoursToUpdate;
+            if (schedule.getHour() == null || schedule.getHour().isEmpty()) {
+                hoursToUpdate = lastSchedule.getHour();
+            } else {
+                hoursToUpdate = schedule.getHour();
+            }
+            pst.setString(2, hoursToUpdate);
+
+            String daysToUpdate;
+            if (schedule.getDay() == null || schedule.getDay().isEmpty()) {
+                daysToUpdate = lastSchedule.getDay();
+            } else {
+                daysToUpdate = schedule.getDay();
+            }
+            pst.setString(3, daysToUpdate);
+
+            Month monthtoUpdate;
+            if (schedule.getMonth() == null) {
+                monthtoUpdate = lastSchedule.getMonth();
+            } else {
+                monthtoUpdate = schedule.getMonth();
+            }
+            String month = monthtoUpdate.toString().toUpperCase();
+            pst.setString(4, month);
+
+            pst.setInt(5, schedule.getID());
+
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+
+        return schedule;
+    }
 
 
     @Override
