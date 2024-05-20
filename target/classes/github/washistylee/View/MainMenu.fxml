@@ -6,6 +6,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -47,7 +48,11 @@
       </TableView>
       <Button fx:id="buttonAddSchedule" layoutX="132.0" layoutY="551.0" mnemonicParsing="false" onAction="#addScheduledModal" prefHeight="35.0" prefWidth="106.0" style="-fx-background-color: #e5903c;" text="Añadir Actividad" textFill="WHITE" />
       <Button fx:id="buttonConsultActivities" layoutX="249.0" layoutY="551.0" mnemonicParsing="false" onAction="#consultScheduleModal" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color: #e5903c;" text="Consultar Actividades" textFill="WHITE" />
-      <ImageView fx:id="photoImageView" fitHeight="135.0" fitWidth="191.0" layoutX="20.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="photoImageView" fitHeight="135.0" fitWidth="135.0" layoutX="26.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <clip>
+            <Circle fx:id="photoClip" centerX="67.5" centerY="67.5" radius="67.5" />
+         </clip>
+      </ImageView>
       <Button fx:id="button" layoutX="222.0" layoutY="112.0" mnemonicParsing="false" onAction="#loadImage" text="Actualizar Foto" />
    </children>
 </AnchorPane>

@@ -23,7 +23,7 @@
             <Font name="Harrington" size="31.0" />
          </font>
       </Text>
-      <Text fill="#e5903c" layoutX="242.4" layoutY="139.866796875" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesión como Cuidador" AnchorPane.bottomAnchor="254.488671875" AnchorPane.leftAnchor="242.4" AnchorPane.rightAnchor="97.20937500000002" AnchorPane.topAnchor="121.4">
+      <Text fill="#e5903c" layoutX="288.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesión" AnchorPane.bottomAnchor="247.0" AnchorPane.leftAnchor="288.0" AnchorPane.rightAnchor="195.291015625" AnchorPane.topAnchor="127.0">
          <font>
             <Font name="Book Antiqua" size="20.0" />
          </font>
@@ -35,7 +35,7 @@
          <effect>
             <Reflection />
          </effect></Button>
-      <TextField fx:id="textFieldUser" layoutX="277.0" layoutY="174.0" promptText="Usuario" style="-fx-focus-traversable: #e5903c;" text="juanelsoldado16@gmail.com">
+      <TextField fx:id="textFieldUser" layoutX="277.0" layoutY="174.0" promptText="Usuario" style="-fx-focus-traversable: #e5903c;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
@@ -44,7 +44,7 @@
             <Image url="@toBackArroww.png" />
          </image>
       </ImageView>
-      <PasswordField fx:id="passwordField" layoutX="277.0" layoutY="209.0" promptText="Contraseña" text="Juaneco99.">
+      <PasswordField fx:id="passwordField" layoutX="277.0" layoutY="209.0" promptText="Contraseña">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></PasswordField>
