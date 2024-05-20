@@ -1,0 +1,84 @@
+
+J
+java:S3740*"/Provide the parametrized type for this generic.(ˆÀ¶şÿÿÿÿ
+R
+java:S4973İ"<Strings and Boxed types should be compared using "equals()".(ûŞÏC
+R
+java:S4973›"<Strings and Boxed types should be compared using "equals()".(ûŞÏC
+R
+java:S4973­"<Strings and Boxed types should be compared using "equals()".(ûŞÏC
+R
+java:S4973Á"<Strings and Boxed types should be compared using "equals()".(ûŞÏC
+R
+java:S4973Õ"<Strings and Boxed types should be compared using "equals()".(ûŞÏC
+R
+java:S4973á"<Strings and Boxed types should be compared using "equals()".(ûŞÏC
+R
+java:S4973í"<Strings and Boxed types should be compared using "equals()".(ûŞÏC
+R
+java:S4973û"<Strings and Boxed types should be compared using "equals()".(ûŞÏC
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¿ó™ú
+c
+java:S2095€"GUse try-with-resources or close this "MinderDAO" in a "finally" clause.(‰ıøÈÿÿÿÿÿ
+b
+java:S2095O"GUse try-with-resources or close this "MinderDAO" in a "finally" clause.(‰ıøÈÿÿÿÿÿ
+j
+java:S1450H"TRemove the "child" field and declare it as a local variable in the relevant methods.(î”Ã°
+S
+java:S1117X"=Rename "imageFile" which hides the field declared at line 62.(ÕÕ½
+Z
+java:S2147b"DCombine this catch with the one at line 96, which has the same body.(ï­£Ä
+E	java:S106g"+Replace this use of System.out by a logger.(¥‡şÿÿÿÿ
+T
+java:S1117x"9Rename "child" which hides the field declared at line 72.(ĞÀâøÿÿÿÿ
+@	java:S106©"+Replace this use of System.out by a logger.(ÊÁ·n
+U
+java:S1117É"9Rename "child" which hides the field declared at line 72.(õøÇşüÿÿÿÿ
+P
+java:S1117Ë"9Rename "child" which hides the field declared at line 72.(Á››
+O
+java:S1117Í"9Rename "child" which hides the field declared at line 72.(àÎ
+P
+java:S1117Ï"9Rename "child" which hides the field declared at line 72.(«Šìš
+P
+java:S1117Ñ"9Rename "child" which hides the field declared at line 72.(¼½ı 
+P
+java:S1117Õ"9Rename "child" which hides the field declared at line 72.(—şÔŒ
+P
+java:S1117á"9Rename "child" which hides the field declared at line 72.(¡·È¤
+i
+java:S3776ì"RRefactor this method to reduce its Cognitive Complexity from 52 to the 15 allowed.(ÜÆÂğ
+U
+java:S1117ñ"9Rename "child" which hides the field declared at line 72.(õøÇşüÿÿÿÿ
+P
+java:S1117ó"9Rename "child" which hides the field declared at line 72.(Á››
+O
+java:S1117õ"9Rename "child" which hides the field declared at line 72.(àÎ
+P
+java:S1117÷"9Rename "child" which hides the field declared at line 72.(«Šìš
+P
+java:S1117ù"9Rename "child" which hides the field declared at line 72.(¼½ı 
+P
+java:S1117ı"9Rename "child" which hides the field declared at line 72.(—şÔŒ
+u
+java:S1171†"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+P
+java:S1117‰"9Rename "child" which hides the field declared at line 72.(›ƒ‡À
+V
+java:S1161":Add the "@Override" annotation above this method signature(‚¯­Âûÿÿÿÿ
+P
+java:S1117Ÿ"9Rename "child" which hides the field declared at line 72.(¡·È¤
+P
+java:S1117±"9Rename "child" which hides the field declared at line 72.(¡·È¤
+P
+java:S1117Å"9Rename "child" which hides the field declared at line 72.(¡·È¤
+P
+java:S1117Ù"9Rename "child" which hides the field declared at line 72.(¡·È¤
+P
+java:S1117å"9Rename "child" which hides the field declared at line 72.(¡·È¤
+P
+java:S1117ñ"9Rename "child" which hides the field declared at line 72.(¡·È¤
+P
+java:S1117‚"9Rename "child" which hides the field declared at line 72.(¡·È¤
+C
+java:S1068>"-Remove this unused "imageFile" private field.(şŠÆ·
