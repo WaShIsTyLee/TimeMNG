@@ -35,7 +35,7 @@
          <effect>
             <Reflection />
          </effect></Button>
-      <TextField fx:id="textFieldUser" layoutX="277.0" layoutY="174.0" promptText="Usuario" style="-fx-focus-traversable: #e5903c;" text="juanelsoldado16@gmail.com">
+      <TextField fx:id="textFieldUser" layoutX="277.0" layoutY="174.0" promptText="Usuario" style="-fx-focus-traversable: #e5903c;">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></TextField>
@@ -44,7 +44,7 @@
             <Image url="@toBackArroww.png" />
          </image>
       </ImageView>
-      <PasswordField fx:id="passwordField" layoutX="277.0" layoutY="209.0" promptText="Contraseña" text="Juaneco99.">
+      <PasswordField fx:id="passwordField" layoutX="277.0" layoutY="209.0" promptText="Contraseña">
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor></PasswordField>

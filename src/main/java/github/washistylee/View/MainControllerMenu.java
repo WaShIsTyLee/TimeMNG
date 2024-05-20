@@ -18,6 +18,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -63,16 +64,14 @@ public class MainControllerMenu extends Controller implements Initializable {
     private ImageView photoImageView;
     @FXML
     private Button button;
+    @FXML
+    private Circle photoClip;
 
     TeacherDAO tDao = new TeacherDAO();
     ChildDAO cDao = new ChildDAO();
     private ObservableList<Child> child;
 
-    private void setImageInMenu() {
 
-
-
-    }
 
 
     @FXML
@@ -94,7 +93,6 @@ public class MainControllerMenu extends Controller implements Initializable {
                     minder.setPhoto(Bytes.convertImageToBytes(imageFile));
                     minder.setEmail(Sesion.getInstancia().getUsuarioIniciado().getEmail());
                     mdao.updatePhoto(minder);
-
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -105,6 +103,7 @@ public class MainControllerMenu extends Controller implements Initializable {
             System.out.println("photoImageView o su escena son nulos");
         }
     }
+
 
 
     /**
@@ -235,6 +234,9 @@ public class MainControllerMenu extends Controller implements Initializable {
      * Initializes the UI components and behavior specific to a Teacher user.
      */
     private void initializeMinder() {
+        photoClip.setRadius(photoImageView.getFitWidth() / 2);
+        photoClip.setCenterX(photoImageView.getFitWidth() / 2);
+        photoClip.setCenterY(photoImageView.getFitHeight() / 2);
         tableView.setEditable(true);
         tableColumnName.setCellValueFactory(child ->
                 new SimpleStringProperty(child.getValue().getName()));
