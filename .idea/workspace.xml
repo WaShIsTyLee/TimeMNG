@@ -10,18 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64502594-c131-4c8d-8738-4294ffef8383" name="Changes" comment="Carga inicial DAO">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/f/1f86aa0833b797cd341ef5635f3ab538cb39af4e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a01e380c7b7e91d8fc55c301fad65dcfe097b5a1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dcede2a8fbad324450d825a8a3ad09f93afcf196" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e954cf9a512ad5f0be498d6ddb4e017ca31487f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/f/1f86aa0833b797cd341ef5635f3ab538cb39af4e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/0/a01e380c7b7e91d8fc55c301fad65dcfe097b5a1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/c/dcede2a8fbad324450d825a8a3ad09f93afcf196" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/9/e954cf9a512ad5f0be498d6ddb4e017ca31487f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/github/washistylee/View/MainControllerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/github/washistylee/View/MainControllerMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLogin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginMinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/github/washistylee/View/MenuLoginMinder.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainControllerMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainControllerMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainControllerMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainControllerMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLogin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLogin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginMinder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/github/washistylee/View/MenuLoginMinder.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TimeMNG-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TimeMNG-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +93,10 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="TimeMNG-1.0-SNAPSHOT-jar-with-dependencies.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/TimeMNG-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,6 +108,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.TimeMNG-1.0-SNAPSHOT-jar-with-dependencies.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -221,6 +231,10 @@
       <workItem from="1716186845809" duration="989000" />
       <workItem from="1716188489621" duration="103000" />
       <workItem from="1716188723193" duration="127000" />
+      <workItem from="1716188958129" duration="1361000" />
+      <workItem from="1716190592620" duration="303000" />
+      <workItem from="1716194177541" duration="84000" />
+      <workItem from="1716199396688" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="Hola">
       <option name="closed" value="true" />
